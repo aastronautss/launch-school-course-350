@@ -284,3 +284,17 @@ Now let's write another program that runs `minion.rb` and gives a message based 
 `ruby minion.rb`
 puts $?.success? ? 'It worked.' : "It failed with a status of #{$?.exitstatus}"
 ```
+
+### Media Transcoding
+
+#### Intro to FFMPEG
+
+Ruby isn't all too great at video processing, since it's a task that requires lots of low-level work involving a lot of data. We can instead use Ruby as a scripting language to automate the operation of other powerful programs.
+
+FFMPEG is a video manipulation workhorse that runs on all platforms. We can run it with the command line:
+
+```
+ffmpeg -i $INPUT_PATH -vf scale=$SIZE:-1 $OUTPUT_PATH 2>&1
+```
+
+This is fairly self-explanatory. `2>&1` causes the error output of the program to be redirected to the same place as normal output so it can be captured easily by the program running the command.

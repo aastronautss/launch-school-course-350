@@ -192,118 +192,172 @@ puts "Directories: #{dir_count}"
 
 `Errno::EEXIST` is raised if the dir already exists.
 
-# First Go
+## Lesson 2: console Applications
 
-## Lesson 1
-
-### Working with Paths
+### Arguments
 
 #### 1.
 
 ```ruby
-File.basename
+# echo.rb
+
+ARGV.each_with_index do |arg, idx|
+  puts "#{idx}: #{arg}"
+end
 ```
 
 #### 2.
 
 ```ruby
-File.basename "file.txt", "txt"
+# program.rb
+
+require 'optparse'
+
+verbose = false
+number = 1
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: program.rb [options]"
+
+  opts.on '-v', "Enable verbose logging" do
+    verbose = true
+  end
+
+  opt.on '-n NUMBER', 'Use number' do |n|
+    number = Integer(n)
+  end
+end.parse!
+
+puts "Verbose is #{verbose}"
+puts "Number is #{number}"
 ```
 
 #### 3.
 
-##### a.
-
 ```ruby
-File.absolute_path("../../data", __FILE__)
+# alpha_opt.rb
+
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: program.rb [options]"
+
+  ('a'..'z').each do |letter|
+    opts.on("-#{letter}", "Option #{letter.upcase}") do
+      a = true
+    end
+  end
+end.parse!
 ```
-
-##### b.
-
-```ruby
-Dir.glob "../../data/*.txt"
-```
-
-Real answer:
-
-```ruby
-data_path = File.absolute_path("../../data", __FILE__)
-puts Dir.glob(File.join(data_path), "**/*.txt")
-```
-
-##### c.
-
-```ruby
-data_path = File.absolute_path("../../data", __FILE__)
-puts Dir.glob(File.join(data_path), "income-????.csv")
-```
-
-##### d.
-
-```ruby
-file_path = "/Users/captain/ruby/data/sources/development/fusion.txt"
-File.extname file_path # => ".txt"
-File.basename file_path, ".*" # => fusion
-File.dirname file_path # => "/Users/captain/ruby/data/sources/development"
-```
-
-### Reading and Writing Files
-
-#### 1.
-
-```ruby
-File.unlink "garbage.db"
-```
-
-#### 2.
-
-##### a.
-
-[http://ruby-doc.org/core-2.1.4/IO.html#method-c-new-label-IO+Open+Mode](http://ruby-doc.org/core-2.1.4/IO.html#method-c-new-label-IO+Open+Mode)
-
-##### b.
-
-Use `w` or `w+`.
-
-#### 3.
-
-No, passing a block to `File.open` will close the file after the block has finished executing.
 
 #### 4.
 
+First we parse the flagged options with `OptionParser`. After `#parse!` is called, `ARGV` is left with the leftover options:
+
 ```ruby
-Dir.entries(".").select do |path|
-  File.extname(p) == ".rb"
+# positional_opts.rb
+
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: positional_opts.rb [options]'
+
+  opts.on '-v', 'Enable verbose mode'
+  opts.on '-o OUTFILE', 'Use specified output file'
+end.parse!
+
+ARGV.each do |file|
+  puts file
 end
 ```
 
-#### 5.
+### Input and Output
+
+#### 1.
+
+`Kernel.putc` can print a single character.
+
+#### 2.
+
+The difference between `putc` and `print` is that `putc` returns the value it printed, while `print` and `puts` return `nil`.
+
+
+### Exiting
+
+#### 1.
 
 ```ruby
-home_dir = ENV["HOME"]
-file_count = dir_count = 0
+# counter.rb
 
-Dir.entries(home_dir).each do |path|
-  next if path == "." || path == ".."
-  fullpath = File.join(home_dir, path)
+#!/usr/bin/env ruby
 
-  if File.directory? fullpath
-    dir_count += 1
-  else
-    file_count += 1
-  end
+n = 1
+
+loop do
+  puts n
+  sleep 1
+  n += 1
 end
-
-puts "Files: #{file_count}"
-puts "Directories: #{dir_count}"
 ```
 
-#### 6.
+With `at_exit` call:
+
+```ruby
+# counter.rb
+
+#!/usr/bin/env ruby
+
+n = 1
+
+at_exit { puts "At least I got to #{n}!" }
+
+loop do
+  puts n
+  sleep 1
+  n += 1
+end
+```
+
+#### 2.
+
+We can use `exit!` to exit without executing our `at_exit` blocks.
+
+### External Programs
+
+#### 1.
+
+Use `ls /` to get a list of filenames in an array.
+
+```ruby
+`ls /`.split
+```
+
+#### 2.
 
 ##### a.
 
-`Dir.mkdir` returns a `0` if it successfully makes a directory.
+```ruby
+# commitall
+
+#!/usr/bin/env ruby
+
+commit_message = ARGV.first
+
+`git add -A`
+`git commit -m "#{commit_message}"`
+```
 
 ##### b.
 
-`Dir.mkdir` will raise a `Errno::EEXIST` if it cannot be created.
+Double quotes in commit messages need to be escaped. We can do this using `shellwords`:
+
+```ruby
+require 'shellwords'
+
+commit_message = ARGV.first
+
+`git add -A`
+`git commit -m #{Shellwords.escape(commit_message)}`
+```
+
+Note that we don't have to add quotes to the resulting string, as `Shellwords.escape` already adds them.

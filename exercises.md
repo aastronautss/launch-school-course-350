@@ -361,3 +361,172 @@ commit_message = ARGV.first
 ```
 
 Note that we don't have to add quotes to the resulting string, as `Shellwords.escape` already adds them.
+
+## Data Serialization
+
+### Marshal
+
+#### 1.
+
+What exception is raised when the class can't be found for an object as it is being unmarshalled?
+
+`ArgumentError`
+
+#### 2.
+
+True or false: Marshal can serialize Proc objects.
+
+False.
+
+```ruby
+def m &block
+  puts Marshal.dump block
+end
+
+m do
+  puts 'hello'
+end
+
+#=> TypeError
+```
+
+### Assignment: Marshalling Objects
+
+```ruby
+class Person
+  def initialize(first_name, middle_name, last_name)
+    @first_name = first_name
+    @middle_name = middle_name
+    @last_name = last_name
+  end
+
+  def full_name
+    [@first_name, @middle_name, @last_name].join(" ")
+  end
+end
+
+ada_lovelace = Person.new("Augusta", "Ada", "King")
+```
+
+#### 1.
+
+```ruby
+marshalled_ada = Marshal.dump ada_lovelace
+File.write 'ada.marshal', data
+```
+
+#### 2.
+
+```ruby
+people = []
+
+File.open 'ada.marshal', 'r' do |file|
+  file.each do |line|
+    people << Marshal.load line.chomp
+  end
+end
+
+people.each { |person| puts person.full_name }
+```
+
+### Serializing Objects as YAML
+
+#### 1.
+
+```ruby
+require 'yaml'
+require_relative './person'
+
+ada_lovelace = Person.new 'Augusta', 'Ada', 'King'
+
+ada_yaml = YAML.dump ada_lovelace
+
+File.write 'ada.yaml', ada_yaml
+```
+
+#### 2.
+
+```ruby
+require 'yaml'
+require_relative './person'
+
+ada_yaml = File.read 'ada.yaml'
+ada_lovelace = YAML.load ada_yaml # or YAML.load_file 'ada.yaml'
+puts ada_lovelace.full_name
+```
+
+### Serializing Objects as JSON
+
+#### 1.
+
+`JSON.parse` will only give us objects that fit with the JSON standard. `JSON.load` will attempt to create Ruby objects, similar to how Marshal works.
+
+#### 2.
+
+##### a.
+
+If the following code is run...
+
+```ruby
+class Address
+  def to_json
+    {street: "3140 W. Belmont St.", city: "Chicago", state: "IL"}
+  end
+end
+
+address = Address.new
+puts JSON.generate(address)
+```
+
+...we will get some errors. First, we need to require `'json'`. Second, we need to return a JSON-compatible object from `to_json` (a hash will not do). Third, `to_json` needs to accept an argument.
+
+##### b.
+
+```ruby
+class Address
+  def to_json(opts = {})
+    {street: "3140 W. Belmont St.", city: "Chicago", state: "IL"}.to_json
+  end
+end
+
+address = Address.new
+puts JSON.generate(address)
+```
+
+#### 3.
+
+```ruby
+# ada_to_json.rb
+
+require 'json'
+require_relative './person'
+
+class Person
+  def to_json(*args)
+    {
+      first_name: @first_name,
+      middle_name: @middle_name,
+      last_name: @last_name
+    }.to_json(*args)
+  end
+end
+
+ada_lovelace = Person.new 'Augusta', 'Ada', 'King'
+ada_json = JSON.generate ada_lovelace
+File.write 'ada.json', ada_json
+```
+
+```ruby
+# ada_from_json.rb
+
+require 'json'
+require_relative './person'
+
+ada_json = File.read 'ada.json'
+ada_hash = JSON.parse ada_json
+ada_lovelace = Person.new ada_hash['first_name'],
+  ada_hash['middle_name'],
+  ada_hash['last_name']
+
+puts ada_lovelase.full_name
+```

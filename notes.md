@@ -285,9 +285,9 @@ Now let's write another program that runs `minion.rb` and gives a message based 
 puts $?.success? ? 'It worked.' : "It failed with a status of #{$?.exitstatus}"
 ```
 
-### Media Transcoding
+## Media Transcoding
 
-#### Intro to FFMPEG
+### Intro to FFMPEG
 
 Ruby isn't all too great at video processing, since it's a task that requires lots of low-level work involving a lot of data. We can instead use Ruby as a scripting language to automate the operation of other powerful programs.
 
@@ -298,3 +298,111 @@ ffmpeg -i $INPUT_PATH -vf scale=$SIZE:-1 $OUTPUT_PATH 2>&1
 ```
 
 This is fairly self-explanatory. `2>&1` causes the error output of the program to be redirected to the same place as normal output so it can be captured easily by the program running the command.
+
+## Data Serialization
+
+### Introduction
+
+Ruby needs a way to represent data for transmission between programs, since Ruby objects only exist in memory. A common way to represent these objects is text, which is nice, since text is versatile. The process of putting a Ruby object (or any kind of data, for that matter) is called serialization. Here we'll look at several such formats.
+
+### Marshal
+
+`Marshal` is a module that creates a string representation of any Ruby object and can use strings to recreate objects later, even in a different program on a different computer. This is only useful for internal purposes, and should never be used for input from the outside world. This is because converting a stringified Ruby object can cause arbitrary code to execute. This is a security risk.
+
+Marshalled objects are meant as a means for temporary storage. Marshalled must be converted back into a Ruby object in order for the values to be inspected, which is why it is referred to as an "opaque" data format.
+
+`Marshal.dump` creates a String representation of an object, and `Marshal.load` reverses the process. Notice that although the object can be restored, it creates a new, unique object in memory.
+
+```ruby
+class Phantom
+  def initialize(name)
+    @name = name
+  end
+
+  def hide
+    puts "#{@name} is hidden."
+  end
+end
+
+julia = Phantom.new 'Julia'
+marshalled_julia = Marshal.dump julia
+unmarshalled_julia = Marshal.load marshalled_julia
+
+unmarshalled_julia.hide
+#=> Julia is hidden
+
+julia.object_id
+#=> something
+
+unmarshalled_julia.object_id
+#=> something else
+```
+
+### Serializing Objects as YAML
+
+YAML is a data serialization format that is commonly used for config files in Ruby objects. YAML has similar methods to Marshal, including `dump` and `load`.
+
+A YAML document looks like the following:
+
+```yaml
+---
+receipt:     Oz-Ware Purchase Invoice
+date:        2012-08-06
+customer:
+    given:   Dorothy
+    family:  Gale
+
+items:
+    - part_no:   A4786
+      descrip:   Water Bucket (Filled)
+      price:     1.47
+      quantity:  4
+
+    - part_no:   E1628
+      descrip:   High Heeled "Ruby" Slippers
+      size:      8
+      price:     100.27
+      quantity:  1
+```
+
+YAML is a good choice when we need to interchange data between Ruby and non-Ruby programs. YAML is easy for humans to read and edit, but its whitespace-activeness makes it a little unwieldy. YAML can in some cases serialize Ruby objects as Marshal, but the resulting file would only correctly load in other Ruby programs.
+
+### Serializing Objects as JSON
+
+Ruby gives us a JSON library for reading and writing the JSON format.
+
+```ruby
+require 'json'
+h = { creature: 'falcon', level: 4 }
+json = JSON.generate h
+parsed_h = JSON.parse json #=> { 'creature' => 'falcon', 'level' => 4 }
+```
+
+Notice that the transition between a hash and JSON altered the data slightly. Since JSON does not supports symbols, the symbols in the hash get converted to strings.
+
+If we put an object into our hash, `JSON` will attempt to call the `#to_json` method on that object. If it doesn't exist, it will call `#to_s` and use that value in the resulting object.
+
+```ruby
+json = JSON.generate [julia] # remember julia, the Phantom object we created earlier
+#=> "[/"#<Phantom:0x007...>/"]"
+JSON.parse json
+#=> ["#<Phantom:0x007...>"]
+```
+
+We need to implement a `#to_json` instance method for `Phantom` in order to store information in a JSON string about that object.
+
+```ruby
+class Phantom
+  def to_json(options=nil)
+    {type: "phantom", name: @name}.to_json
+  end
+end
+
+json = JSON.generate [julia]
+JSON.parse json
+#=> [{"type"=>"phantom", "name"=>"Julia"}]
+```
+
+JSON is an extremely popular standard for representation of data used by web services. Since it's based on JavaScript objects, the most similar representation in Ruby is a hash.
+
+JSON's major drawback is that it doesn't support a datatype for dates and times. These are usually converted to a standard String representation when being transmitted.

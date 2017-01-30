@@ -406,3 +406,51 @@ JSON.parse json
 JSON is an extremely popular standard for representation of data used by web services. Since it's based on JavaScript objects, the most similar representation in Ruby is a hash.
 
 JSON's major drawback is that it doesn't support a datatype for dates and times. These are usually converted to a standard String representation when being transmitted.
+
+## Interacting with the Web
+
+### Making HTTP Requests
+
+Ruby gives us a `Net` library that allows us to interact with network systems using various protocols. It operates at a fairly low level, so most people prefer to use a more convenient API. We'll be using `Faraday` here.
+
+Here's how we retrieve a web page with Faraday.
+
+```ruby
+require 'faraday'
+
+# Returns a `Faraday::Response` object.
+response = Faraday.get 'http://google.com'
+
+response.status #=> 301
+response.headers #=> {'location' => 'http://www.google.com', ...}
+response.body #=> '<HTML><HEAD><meta http-equiv=\"content-type\" ...'
+```
+
+We can fetch some JSON data from a web page too. The JSON lib is ready to take the JSON body returned by a JSON API.
+
+```ruby
+require 'faraday'
+require 'json'
+
+respone = Faraday.get 'http://api.openweathermap.org/data/2.5/weather?q=London,uk'
+json = response.body
+
+data = JSON.parse json
+data['weather'][0]['description']
+#=> 'Sky is clear'
+```
+
+### Parsing Web Pages
+
+While many services nowadays use JSON APIs in order to make their data available, some data is only available on a website. The practice of collecting data from a public website is called "web scraping." It involves:
+
+- Determining the URL for the desired web page.
+- Fetching the HTML code for that page.
+- Loading the HTML using a library that can parse it.
+- Traversing the document structure and extracting the desired information.
+
+If we want to parse out numerical data, we want to convert the data on the page (which is always text), to a Fixnum for Float. Thus there is a fifth step involved much of the time:
+
+- Parsing the extracted information into other objects as needed.
+
+One of the more popular gems for doing this is Nokogiri.

@@ -530,3 +530,198 @@ ada_lovelace = Person.new ada_hash['first_name'],
 
 puts ada_lovelase.full_name
 ```
+
+## Interacting with the Web
+
+### Making HTTP Requests
+
+#### 1.
+
+```ruby
+require 'faraday'
+
+response = Faraday.get 'http://google.com'
+body = response.body
+matches = body.match /\"(http\:\/\/.*)\"/i
+puts Faraday.get(matches[1]).body
+```
+
+#### 2.
+
+##### a.
+
+```ruby
+require 'faraday'
+
+response = Faraday.post 'http://requestb.in/z4a7xpz4', { 'hello': 'hi' }
+```
+
+##### b.
+
+```ruby
+require 'faraday'
+require 'json'
+
+data = { 'hello': 'hi' }.to_json
+response = Faraday.put 'http://requestb.in/z4a7xpz4', data, { 'Content-Type' => 'application/json' }
+```
+
+### Parsing Web Pages
+
+#### 1.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+response = Faraday.get 'http://google.com'
+html = response.body
+
+doc = Nokogiri::HTML html
+url = doc.at('a')['href']
+
+second_response = Faraday.get url
+puts second_response.body
+```
+
+#### 2.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+response = Faraday.get 'https://www.flickr.com/photos/flickr/galleries/72157652879582045/'
+html = response.body
+doc = Nokogiri::HTML html
+imgs = doc.css 'img'
+imgs.each do |img|
+  title = img.attr('alt').length > 0 ? img.attr('alt') : 'Untitled'
+  puts "#{title}: #{img.attr 'src'}"
+end
+```
+
+### Fetching the Title of a Webpage
+
+#### 1.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+puts 'URL?'
+url = gets.strip
+
+response = Faraday.get url
+
+if response.success?
+  html = response.body
+  doc = Nokogiri::HTML html
+  title = doc.at('title').text
+
+  puts "Retrieved #{url} with a status of #{response.status}"
+  puts "Size: #{html.size} bytes."
+  puts "Title: #{title}"
+else
+  puts "Recieved a status code of #{response.status}"
+end
+```
+
+#### 2.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+puts 'URL?'
+url = gets.strip
+
+begin
+  response = Faraday.get url
+
+  if response.success?
+    html = response.body
+    doc = Nokogiri::HTML html
+    title = doc.at('title').text
+
+    puts "Retrieved #{url} with a status of #{response.status}"
+    puts "Size: #{html.size} bytes."
+    puts "Title: #{title}"
+  else
+    puts "Recieved a status code of #{response.status}"
+  end
+rescue Faraday::ConnectionFailed => e
+  puts e.message
+end
+```
+
+#### 3.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+url = ''
+
+while url !~ /^https?\:\/\//i
+  puts 'URL?'
+  url = gets.strip
+end
+
+begin
+  response = Faraday.get url
+
+  if response.success?
+    html = response.body
+    doc = Nokogiri::HTML html
+    title = doc.at('title').text
+
+    puts "Retrieved #{url} with a status of #{response.status}"
+    puts "Size: #{html.size} bytes."
+    puts "Title: #{title}"
+  else
+    puts "Recieved a status code of #{response.status}"
+  end
+rescue Faraday::ConnectionFailed => e
+  puts e.message
+end
+```
+
+#### 4.
+
+```ruby
+require 'faraday'
+require 'nokogiri'
+
+def follow_redirect(response)
+  location = response.headers['Location']
+  puts "Redirecting to #{location}..."
+  Faraday.get location
+end
+
+url = ''
+
+while url !~ /^https?\:\/\//i
+  puts 'URL?'
+  url = gets.strip
+end
+
+begin
+  response = Faraday.get url
+
+  response = follow_redirect(response) if [301, 302].include? response.status
+
+  if response.success?
+    html = response.body
+    doc = Nokogiri::HTML html
+    title = doc.at('title').text
+
+    puts "Retrieved #{url} with a status of #{response.status}"
+    puts "Size: #{html.size} bytes."
+    puts "Title: #{title}"
+  else
+    puts "Recieved a status code of #{response.status}"
+  end
+rescue Faraday::ConnectionFailed => e
+  puts e.message
+end
+```

@@ -454,3 +454,130 @@ If we want to parse out numerical data, we want to convert the data on the page 
 - Parsing the extracted information into other objects as needed.
 
 One of the more popular gems for doing this is Nokogiri.
+
+## Working with CSV
+
+### Introduction to CSV
+
+CSV is a common format that is used as an intermediary between a large number of different systems. Spreadsheets are often exported in CSV format, and database dumps and other data "releases" are often made available in CSV. This popularity is largely due to nearly universal support for the format across programming languagesand the simplicity of the format itself, which is represented in plaintext.
+
+CSV is not a standard, and different implementations can have different behavior. It is a good idea to know what delimiters are used to divide the lines and values. For example, it is fairly commont to use tab characters instead of commas to divide values.
+
+#### Sitepoint's guide to Ruby CSV
+
+##### Avoiding common quirks
+
+If we have a piece of data with commas in it, we need to surround the entire cell with double quotes:
+
+```csv
+Maria,55,5054,"Good, delicious food!"
+```
+
+If we have double quotes within such a cell, we need to escape those characters with an additional double quote character.
+
+```csv
+Carlos,22,4352,"I am ""pleased"", but could be better"
+```
+
+##### How Ruby Sees CSV Files
+
+First we require the 'csv' lib, which is included in Ruby
+
+```ruby
+require 'csv'
+```
+
+The CSV lib gives us the option to either import the entire file at once (in memory), or read from it line by line. With larger files, we'll probably need to do the latter. Ruby stores each row as an array. Let's use `CSV.read` to read in the entire file `customers.csv`:
+
+```ruby
+require 'csv'
+customers = CSV.read 'customers.csv'
+#=>
+# [ ...
+# ["Maria", "55", "5054", "Good, delicious food."]
+# ... ]
+```
+
+Other lines omitted. Note that we've created a 2D array. We can read line-by-line with `CSV.foreach`:
+
+```ruby
+CSV.foreach('customers.csv') do |row|
+  puts row.inspect
+end
+```
+
+##### The CSV Lib Can Also Process Strings, Not Just Files
+
+We can store comma-separated data into a `String` object in Ruby.
+
+```ruby
+a_string = "Dan,34\nMaria,55"
+CSV.parse a_string #=> [['Dan', '34'], ['Maria', '55']]
+```
+
+We can also pass a block into `CSV.parse`:
+
+```ruby
+CSV.parse(a_string) { |row| puts row.inspect }
+```
+
+This will produce ['Dan', '34'] and ['Maria', '55'] on separate lines. Without a block, `CSV.parse` is similar to `CSV.read`; the difference being that `parse` takes a string and `read` takes a (path to a) file. The output is the same.
+
+##### What to do When Your CSV is SSV (Semicolon-separated values)
+
+If we use a different character to separate our columns, we need to pass an options hash into `read`, `parse`, `foreach`, etc.. In this case, we pass a hash with the key `:col_sep`, with the value being whatever we want our character to be. For example, we use `col_sep: ';'` if our file is semicolon-delimited.
+
+```ruby
+new_customers = CSV.read 'customers.csv', col_sep: ';'
+```
+
+##### Let's Do Some Manipulation
+
+Let's say we want to take the CSV with most frequent customers (`customers.csv`) and calculate the average money spent for each arrival, dividing the total money the customer spent with the total times they visited. We already have that data in column 3 and 2.
+
+```ruby
+average_money_spent = []
+CSV.foreach 'customers.csv' do |row|
+  average_money_spent << row[2] / row[1]
+end
+```
+
+The third line here will throw, since the data in each column gets parsed as a string. We could use `Integer` or a similar technique whenever we take data from a cell, but the `CSV` lib gives us the option to pass in a `:converters` option in the opts hash. Since we want to convert all numeric values to `Fixnum` or its ilk, we can make the value for that `:numeric`:
+
+```ruby
+CSV.foreach('customers.csv', converters: :numeric) do |row|
+  # ...
+end
+```
+
+##### Outputting our Results in a File
+
+So we have our dataset here:
+
+```csv
+Dan,34,2548,Lovin it!
+Maria,55,5054,"Good, delicious food"
+Carlos,22,4352,"I am ""pleased"", but could be better"
+Stephany,34,6542,I want bigger steaks!!!!!
+```
+
+Now let's add a 5th column for the data we're putting in `average_money_spent`. To do this, we'll need to open the file in different modes. `CSV` gives us the `#open` method, much like the one in `File`.
+
+So let's read the contents of the CSV file into memory and add the corresponding value of `average_money_spent` to each row. Then let's save the file using `CSV.open` in `w` mode.
+
+```ruby
+# Continuing from the above code...
+
+customers_array = CSV.read 'customers.csv'
+customers_array.each do |customer|
+  customer << average_money_spent.shift
+end
+
+CSV.open 'new_customers_file.csv', 'w' do |csv_obj|
+  customers_array.each do |row_array|
+    csv_obj << row_array
+  end
+end
+```
+
+So let's step through this. First we have an array `average_money_spent` from earlier. Each element in this array corresponds to a row in our table, so its length is equal to the number of rows in the table. From the same data, we're reading and parsing it into `customers_array`, which is a 2d array. To each element in this array we're adding another element from `average_money_spent`. We then open a new file `new_customers_file.csv` and write each row from `customers_array` into this file.

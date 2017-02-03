@@ -725,3 +725,100 @@ rescue Faraday::ConnectionFailed => e
   puts e.message
 end
 ```
+
+## CSV
+
+### Introduction to CSV
+
+#### 1.
+
+When Ruby reads in a CSV file, each row in the CSV is represented as an array within an array of all the rows.
+
+#### 2.
+
+`CSV.read`
+
+#### 3.
+
+`CSV.parse`
+
+#### 4.
+
+CSVs are not always delimited by commas.
+
+#### 5.
+
+```ruby
+csv = CSV.new File.read('ice_cream.csv'),
+  headers: true,
+  header_converters: :symbol,
+  converters: :all
+h = csv.to_a.map &:to_hash
+```
+
+### Transforming Data
+
+#### 1.
+
+```ruby
+require 'csv'
+require 'json'
+
+birthday_people = []
+day = Date.today.day
+month = Date.today.month
+
+CSV.foreach('clients.csv', headers: true) do |row|
+  birthdate = Date.strptime row['Birthday'], "%m/%d/%Y"
+  if day == birthdate.day && month == birthdate.month
+    birthday_people << row.to_h
+  end
+end
+
+File.write "#{month + 1}-#{day}-birthdays.json", JSON.dump(birthday_people)
+```
+
+#### 2.
+
+```ruby
+require 'csv'
+require 'json'
+
+Dir.mkdir('birthdays') unless Dir.exist?('birthdays')
+
+days = {}
+
+CSV.foreach 'clients.csv', headers: true do |row|
+  birthday = row['Birthday'].scan(/\A\d+\/\d+/).first
+  days[birthday] ||= []
+  days[birthday] << row.to_h
+end
+
+days.each do |birthday, clients|
+  filename = birthday.sub '/', '-'
+  File.write "birthdays/#{filename}.json", JSON.dump(clients)
+end
+```
+
+#### 3.
+
+```ruby
+require 'csv'
+require 'json'
+
+Dir.mkdir('birthdays') unless Dir.exist?('birthdays')
+
+days = {}
+
+CSV.foreach 'clients.csv', headers: true do |row|
+  birthday = row['Birthday'].scan(/\A\d+\/\d+/).first
+  days[birthday] ||= []
+  days[birthday] << row.to_h
+end
+
+days.each do |birthday, clients|
+  month, day = birthday.split '/'
+  filename = format('%02d-%02d', month, day)
+  File.write "birthdays/#{filename}.json", JSON.dump(clients)
+end
+```

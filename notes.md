@@ -581,3 +581,197 @@ end
 ```
 
 So let's step through this. First we have an array `average_money_spent` from earlier. Each element in this array corresponds to a row in our table, so its length is equal to the number of rows in the table. From the same data, we're reading and parsing it into `customers_array`, which is a 2d array. To each element in this array we're adding another element from `average_money_spent`. We then open a new file `new_customers_file.csv` and write each row from `customers_array` into this file.
+
+## Building an IRC Bot
+
+### Introduction to IRC
+
+Internet Relay Chat is a text-based protocol for sending messages between clients and servers.
+
+### The IRC Protocol
+
+#### A quick, basic guide on the IRC protocol
+
+The first part of the IRC protocol is the rough layout of messages. The first, optional part is the source (username and hostmask, or server) preceded by a colon, as in `:holmes.freenode.net`. This is rarely included in the message by a client, while it is almost always included in a message by the server.
+
+The next part is the command name, which is in all caps. These are mostly the same as what the user types in after a `/`. For example, `/join` becomes `JOIN`. After this are the arguments, which are mostly limited to one-word values. The exception is the last argument, which is started with a colon character.
+
+Most channels are of the `#channel` variety.
+
+The command is terminated by `\r\n`, not `\n`. Most servers will accept either, though.
+
+An example of a full message is:
+
+```irc
+:Macha!~macha@unaffiliated/macha PRIVMSG #botwar :Test response
+```
+
+The first part of any IRC connection is sending the `NICK` and `USER` messages. The first of these is simple, just `NICK name`. The next is the `USER` message.
+
+An example of a `USER` message is:
+
+```irc
+USER username 0 * :Real name
+```
+
+The `*` is a remnant of earlier days, and will not be changed. The `0` is a bitmask of the user's mode, but with just one switch. Change it to `8` to be invisible to those not in a channel with you.
+
+The next part of the protocol is the `PING` message, because some servers need one immediately after those two messages. The server will send you a message in the format `PING :message` to which it needs a response of `PONG :message`. This is the most common case of a server not sending a source. Most servers use the server name as the message part, but this isn't always the case.
+
+For all the rest of these messages, there is a source on the other messages fom the server side. This is a user and hostmask for a user's message, and a server name otherwise. If you are writing a client, do not send the `:source` part.
+
+The next message to deal with is `JOIN`. The basic format of this message from most servers is:
+
+```irc
+:source JOIN :#channel
+```
+
+Although the spec says otherwise regarding the need for the colon. `JOIN 0` leaves all channels.
+
+Its counterpart is `PART`. Its format is
+
+```irc
+:source PART #channel :reason
+```
+
+`:reason` is optional, and some servers cut it off, since it did not exist in earlier versions of the protocol.
+
+Both of these messages can also accept a list of channels, separated by commas.
+
+```irc
+:source PART #channel1,#channel2 :reason
+```
+
+Don't put spaces between these.
+
+The most important command in the IRC protocol is `PRIVMSG`. This is used for sending messages to channels and between users. Here's the format:
+
+```irc
+:source PRIVMSG <target> :Message
+```
+
+The target is either a user's nick, or a channel's name. To send a message to a channel:
+
+```irc
+:source PRIVMSG #channel :Hello, world
+```
+
+and to a user:
+
+```irc
+:source PRIVMSG Nick :Hi Nick.
+```
+
+The final message you will see in basic usage is `QUIT`. Its format is:
+
+```irc
+:source QUIT :reason
+```
+
+where `:reason` is optional.
+
+#### Video Notes
+
+Here's a list of IRC commands that we'll be using:
+
+```irc
+USER <username> <hostname> <servername> :<realname>
+NICK <nickname>
+JOIN <channel>
+PRIVMSG <target> :<message>
+
+PONG <arg1> <arg2> <etc>
+PART <channel>
+QUIT
+```
+
+Each command begins with the name, followed by a bunch of arguments. The last command is preceeded by a colon, because it might contain a space. There are an unlimited number of arguments, but the most we'll see is 4 or 5.
+
+Since IRC is text-based, we can use telnet to interact with it.
+
+```
+telnet chat.freenode.net 6667
+```
+
+This will connect us to the server. From here we need to tell the server who we are in order to fully connect to the IRC server itself. If we don't indentify ourselves within a reasonable amount of time, the server will close the connection.
+
+```irc
+USER rubyircbot localhost localhost :rubyircbot
+NICK rubyircbot
+```
+
+Once we've identified ourselves the server will send us a bunch of text describing the server we're connected to and the rules we're expected to follow as a user. We can join a channel on the server using the `JOIN` command.
+
+```irc
+JOIN #rubyircbottest
+```
+
+The server sends back a message acknowledging that we've joined the channel.
+
+In the video the instructor connects to the channel using a browser-based IRC client. If we send a message through the client, we should see it in our terminal running telnet.
+
+Looking at the terminal, we see the following message:
+
+```irc
+:rubybottestuser!<information about the server> PRIVMSG #rubyircbottest :Hello there!
+```
+
+Let's reply to the message via the terminal:
+
+```irc
+PRIVMSG #rubyircbottest :leguin.freenode.net
+  Hi!
+```
+
+### IRC Web Clients
+
+There are a lot of IRC clients that can connect to IRC servers. Here we'll use kiwiirc, which is a nice free GUI for communicating over IRC.
+
+To connect to an IRC server and a channel, we just select "Freenode" from the list of networks and choose an nick and a channel. For this lesson we want to make sure we have an empty channel.
+
+### Connect to a Server with TCPSocket
+
+We want to accomplish three things:
+
+- Connect to an IRC server by opening a TCP Socket
+- Send USER, NICK, and JOIN to log into the server and join a room.
+- Print out messages that are received.
+
+In order to connect to an IRC server, we need three things: the server's hostname, the port to connect on, and the nickname our bot can use to identify itself.
+
+### IRC Command Parsing
+
+Say we have the following commands from the server:
+
+```irc
+PING :sendak.freenode.net
+
+:EllenRipley!~ripley@nostromo.biz PRIVMSG #lobby :Hello, world
+
+:sendak.freenode.net NOTICE * :*** Looking up your hostname...
+```
+
+The first is the most basic kind of command, so if we can parse more complex ones this should be trivial.
+
+The second contains some information about who sent the PRIVMSG. First is the NICK (`EllenRipley`), then we have the actual username (`ripley@nostromo.biz`). We also have two arguments, `#lobby` and `:Hello, world`.
+
+Let's see how we can parse this second option. We need to extract the nick, the user, the name of the command, and its arguments.
+
+If the command begins with a colon, then we know the command contains the nick, the user, or both. We parse out the first part, and from that we can extract two items from that: the nick and the user. If the string contains an `!`, then we know it has a user.
+
+```
+:EllenRipley!~ripley@nostromo.biz -> nick & user
+:EllenRipley         -> nick
+~ripley@nostromo.biz -> user
+```
+
+Then we have the command itself with its arguments, which are separated by spaces. The problem is that the trailing argument can also contain spaces. So we can find a colon, and if it's there we can split the string there. That'll give us the trailing argument and everythign else, so we can split everythign else by spaces.
+
+```
+PRIVMSG #lobby :Hello, world
+:Hello, world -> trailing arg
+PRIVMSG #lobby -> everything else
+PRIVMSG -> command
+#lobby, ... -> args
+```
+

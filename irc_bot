@@ -1,0 +1,52 @@
+#! /usr/bin/env ruby
+
+require 'socket'
+
+class IRCBot
+  attr_accessor :host, :port, :nick
+
+  def initialize(host, port, nick, channel)
+    @host = host
+    @port = port
+    @nick = nick
+    @channel = channel
+  end
+
+  def connect
+    open_socket
+    join_channel
+    start_listening
+  end
+
+  private
+
+  def open_socket
+    @socket = TCPSocket.open @host, @port
+  end
+
+  def join_channel
+    send_command "USER #{@nick} localhost localhost :#{@nick}"
+    send_command "NICK #{@nick}"
+    send_command "JOIN #{@channel}"
+  end
+
+  def send_command(command)
+    puts "> #{command}"
+    @socket.puts command
+  end
+
+  def start_listening
+    while line = @socket.gets
+      puts "< #{line}"
+    end
+  end
+end
+
+def validate_channel(channel)
+  !!channel.match(/\A\#.+/)
+end
+
+nick, channel = ARGV
+fail 'must pass nick and channel' unless nick && channel
+fail "channel must begin with '#'" unless validate_channel(channel)
+

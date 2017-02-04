@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby
 
 require 'socket'
+require_relative './command'
 
 class IRCBot
   attr_accessor :host, :port, :nick
@@ -16,6 +17,12 @@ class IRCBot
     open_socket
     join_channel
     start_listening
+  end
+
+  def disconnect
+    send_command "PART #{@channel}"
+    send_command "QUIT"
+    @socket.close
   end
 
   private
@@ -38,6 +45,15 @@ class IRCBot
   def start_listening
     while line = @socket.gets
       puts "< #{line}"
+      process_command line
+    end
+  end
+
+  def process_command(line)
+    command = Command.parse line
+    case Command.name
+    when 'PING'
+      send_command "PONG :#{Command.arguments.last}"
     end
   end
 end
@@ -50,3 +66,8 @@ nick, channel = ARGV
 fail 'must pass nick and channel' unless nick && channel
 fail "channel must begin with '#'" unless validate_channel(channel)
 
+@bot = IRCBot.new 'chat.freenode.net', 6667, nick, channel
+at_exit do
+  @bot.disconnect
+end
+@bot.connect

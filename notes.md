@@ -775,3 +775,71 @@ PRIVMSG -> command
 #lobby, ... -> args
 ```
 
+## Working with Images
+
+### Introduction to RGB Color
+
+The tristimulous theory of color perception is used in photography, film, television and printing. We will use the theory to explain how the mixing of different light colors is achieved.
+
+With additive color, we are mixing colored light. The additive primary colors are red, green, and blue. The secondary colors are obtained when we mix two primary colors together. Red + Blue = Magenta, Red + Green = Yellow, and Blue + Green = Cyan. All three colors come together to produce white light.
+
+When we add together complimentary colors, we get white.
+
+### ChunkyPNG
+
+PNG is al ossless image format that works across a variety of modern browsers. It supports transparency and up to 256 bits of color per channel. We'll be working with the ChunkyPNG lib in this lesson. It allows us to read and modify each pixel's data in a PNG image.
+
+```ruby
+require 'chunky_png'
+
+png = ChunkyPNG::Image.new 50, 50 ChunkyPNG::Color::Transparent
+cells = 50
+
+cells.times do |n|
+  if n % 2 == 0
+    cells.times do |x|
+      if x % 2 != 0
+        png[x, n] = ChunkyPNG::Color.rgba(10, 20, 30, 128)
+      end
+    end
+  end
+end
+
+png.save 'smile.png', interlace: true
+```
+
+The above script gave us a bunch of squares. Let's modify it a bit.
+
+```ruby
+require 'chunky_png'
+
+png = ChunkyPNG::Image.new 50, 50 ChunkyPNG::Color::Transparent
+cells = 50
+
+cells.times do |n|
+  if n % 2 == 0
+    cells.times do |x|
+      if x % 2 != 0
+        png[x, n] = ChunkyPNG::Color.rgba(10, 20, 30, 128)
+      end
+    end
+  end
+end
+
+color = ChunkyPNG::Color.from_hex '#0066FF'
+
+png.circle 15, 10, 5, color, color
+png.circle 35, 20, 3, color, color
+png.circle 25, 20, 3, color, color
+
+png.save 'smile.png', interlace: true
+```
+
+The calls to `#circle` creates circles. The arguments are: `x, y, radius, fill_color, stroke_color`. In this case, we get eyes and a nose.
+
+We'll add the following lines before the save:
+
+```ruby
+pgn.line 5, 25, 25, 40, color, color
+png.line 25, 40, 45, 25, color, color
+```

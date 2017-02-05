@@ -822,3 +822,24 @@ days.each do |birthday, clients|
   File.write "birthdays/#{filename}.json", JSON.dump(clients)
 end
 ```
+
+## Working with Images
+
+### Introduction to RGB Color
+
+#### 1.
+
+The difference between additive and subtractive color is that additive color describes the mixing of light (transmittive), while subtractive color describes the mixing of colored pigments (reflective).
+
+#### 2.
+
+The primary colors of additive color are Red/Green/Blue. Those for subtractive color are Cyan/Magenta/Yellow.
+
+#### 3.
+
+White is produced when complimentary colors are mixed.
+
+#### 4.
+
+`rgb(255,255,0)` represents yellow.
+

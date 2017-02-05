@@ -2,6 +2,7 @@
 
 require 'socket'
 require_relative './command'
+require_relative './message_response'
 
 class IRCBot
   attr_accessor :host, :port, :nick
@@ -51,9 +52,27 @@ class IRCBot
 
   def process_command(line)
     command = Command.parse line
-    case Command.name
+    case command.name
     when 'PING'
-      send_command "PONG :#{Command.arguments.last}"
+      send_command "PONG :#{command.arguments.last}"
+    when 'PRIVMSG'
+      respond_to_message command
+    end
+  end
+
+  def respond_to_message(command)
+    to = command.arguments.first
+    if to == @nick
+      to = command.nick
+    end
+
+    message = command.arguments.last.strip
+
+    if message.start_with? '!'
+      response = MessageResponse.respond_to message
+      send_command "PRIVMSG #{to} :#{response}"
+    elsif to == command.nick
+      send_command "PRIVMSG #{to} :#{message}"
     end
   end
 end

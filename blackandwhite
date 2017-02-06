@@ -11,8 +11,8 @@ image = ChunkyPNG::Image.from_file input
 image.width.times do |x|
   image.height.times do |y|
     color_num = image[x, y]
-    colors = [ChunkyPNG::Color.r(color_num), ChunkyPNG::Color.g(color_num), ChunkyPNG::Color.b(color_num)]
-    avg = colors.inject{ |sum, el| sum + el } / colors.size
+    colors = ChunkyPNG::Color.to_truecolor_bytes color_num
+    avg = colors.inject(&:+) / colors.size
     image[x, y] = ChunkyPNG::Color.rgb avg, avg, avg
   end
 end

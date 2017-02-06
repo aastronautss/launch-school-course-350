@@ -843,3 +843,22 @@ We'll add the following lines before the save:
 pgn.line 5, 25, 25, 40, color, color
 png.line 25, 40, 45, 25, color, color
 ```
+
+## Scraping Data from the Web
+
+### Load a CSV into SQLite
+
+Here are the commands used in the video:
+
+```
+bundle install
+rake setup
+sqlite3 scraper.sqlite3
+
+# In sqlite3 prompt:
+
+.mode csv # change to CSV mode
+.import ../dining_chairs.csv items
+.mode column # change to column (sql) mode
+SELECT * FROM items;
+```

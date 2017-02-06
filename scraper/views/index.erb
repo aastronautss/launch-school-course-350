@@ -1,0 +1,24 @@
+<h1>Items</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Series &amp; Description</th>
+      <th>Product Number</th>
+      <th>Designer</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><img src="<%= item[:image_url] %>" width="50" /></td>
+        <td><strong><%= item[:series] %></strong><br><%= item[:description] %></td>
+        <td><%= item[:number] %></td>
+        <td><%= item[:designer] %></td>
+        <td><%= format("$%0.2f", item[:price]) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

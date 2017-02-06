@@ -1,0 +1,20 @@
+<h1>Designers</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Designer</th>
+      <th>Number of Products</th>
+      <th>Average Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @designers.each do |designer| %>
+      <tr>
+        <td><%= designer[:name] %></td>
+        <td><%= designer[:items_count] %></td>
+        <td><%= format("$%0.2f", designer[:average_price]) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

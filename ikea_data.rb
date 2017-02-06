@@ -5,6 +5,18 @@ url = ARGV[0]
 
 fail 'You must provide a URL to fetch item data from.' unless url
 
+def format_designer(page_text)
+  page_text.gsub(/designers?\s*/i, '').gsub(/\s*\&\s*/, '/')
+end
+
+def format_price(price_text)
+  begin
+    Float price_text.sub(/[^\d\.]/, '')
+  rescue ArgumentError => e
+    nil
+  end
+end
+
 def get_detail_info(product, page)
   detail_url = "http://#{page.uri.hostname}#{product.at('.productLink')['href']}"
 
@@ -20,17 +32,19 @@ def get_detail_info(product, page)
     designer = alternate_div.text.strip if alternate_div
   end
 
+  designer = format_designer(designer)
+
   [detail, product_number, designer]
 end
 
 def get_product_info(product, page)
   name = product.css('.productTitle').text.strip
-  price = product.css('.regularPrice').text.scan(/\$\d*\.\d*/).first
+  price = format_price(product.at('.regularPrice').children.first.text.strip)
   image_url = "http://#{page.uri.hostname}#{product.at('img').attr 'src'}"
 
   detail, product_number, designer = get_detail_info product, page
 
-  [name, detail, product_number, designer, image_url]
+  [name, detail, product_number, designer, image_url, price]
 end
 
 agent = Mechanize.new
@@ -38,11 +52,18 @@ page = agent.get url
 
 title = page.at('h1').text.strip.downcase.gsub ' ', '_'
 output_file = "#{title}.csv"
-products = page.css '.product'
+elements = page.css '.product'
 
 puts "Loaded #{page.body.length} bytes of #{title} with a status of #{page.code}."
 
-CSV.open output_file, 'w' do |csv|
-  products.each { |product| csv << get_product_info(product, page) }
+products = elements.map do |element|
+  print '.'
+  get_product_info element, page
 end
+
+CSV.open output_file, 'w' do |csv|
+  products.each { |product| csv << product }
+end
+
+puts "\nWrote #{products.count} products to #{output_file}."
 

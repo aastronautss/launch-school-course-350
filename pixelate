@@ -1,0 +1,43 @@
+#! /usr/bin/env ruby
+
+require 'chunky_png'
+
+input, output = ARGV
+
+fail "File #{input} does not exist." unless input && File.exist?(input)
+
+def find_square_color(x, y)
+  rgb_sums = [0, 0, 0]
+
+  (x..x + SQUARE_SIZE - 1).each do |square_x|
+    (y..y + SQUARE_SIZE- 1).each do |square_y|
+      colors = ChunkyPNG::Color.to_truecolor_bytes @image[square_x, square_y]
+      rgb_sums = rgb_sums.each_with_index.map { |val, i| val + colors[i] }
+    end
+  end
+
+  rgb_sums.map { |sum| sum / (SQUARE_SIZE**2) }
+end
+
+def set_square_colors!(x, y, color_array)
+  (x..x + SQUARE_SIZE - 1).each do |square_x|
+    (y..y + SQUARE_SIZE - 1).each do |square_y|
+      @image[square_x, square_y] = ChunkyPNG::Color.rgb *color_array
+    end
+  end
+end
+
+SQUARE_SIZE = 20
+@image = ChunkyPNG::Image.from_file input
+
+x_indices = (0...@image.width).select { |num| num % SQUARE_SIZE == 0 }
+y_indices = (0...@image.height).select { |num| num % SQUARE_SIZE == 0 }
+
+x_indices.each do |x|
+  y_indices.each do |y|
+    color_array = find_square_color x, y
+    set_square_colors! x, y, color_array
+  end
+end
+
+@image.save output, interlace: true

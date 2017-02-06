@@ -843,3 +843,25 @@ White is produced when complimentary colors are mixed.
 
 `rgb(255,255,0)` represents yellow.
 
+## Scraping Data from the Web
+
+### Getting to know Mechanize
+
+#### 1.
+
+We can use mechanize to fetch the content from `http://google.com` with the following:
+
+```ruby
+require 'mechanize'
+
+agent = Mechanize.new
+page = agent.get 'http://google.com/'
+```
+
+#### 2.
+
+Mechanize uses Nokogiri to parse html and xml. We can get documentation from nokogiri.org.
+
+#### 3.
+
+We can get a list of links the Nokogiri way using `#search` and passing in the tag name for the element we want.

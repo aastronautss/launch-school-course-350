@@ -862,3 +862,9 @@ sqlite3 scraper.sqlite3
 .mode column # change to column (sql) mode
 SELECT * FROM items;
 ```
+
+## PDF Generation
+
+### Joining Multiple Data Files (from CSV)
+
+The data we have in `checkouts.csv` contains pointers to data in other files.

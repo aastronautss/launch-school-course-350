@@ -1,0 +1,999 @@
+id,title,author,genre
+180,Lucky Jim,Kingsley Amis,comedy
+215,Money,Martin Amis,comedy
+298,The Information,Martin Amis,comedy
+343,The Bottle Factory Outing,Beryl Bainbridge,comedy
+440,According to Queeney,Beryl Bainbridge,comedy
+520,Flaubert's Parrot,Julian Barnes,comedy
+563,A History of the World in 10 1/2 Chapters,Julian Barnes,comedy
+640,"Augustus Carp, Esq.",Himself: Being the Autobiography of a Really Good Man,comedy
+682,Molloy,Samuel Beckett,comedy
+686,Zuleika Dobson,Max Beerbohm,comedy
+748,The Adventures of Augie March,Saul Bellow,comedy
+781,The Uncommon Reader,Alan Bennett,comedy
+826,Queen Lucia,EF Benson,comedy
+917,The Ascent of Rum Doodle,WE Bowman,comedy
+930,A Good Man in Africa,William Boyd,comedy
+977,The History Man,Malcolm Bradbury,comedy
+1026,No Bed for Bacon,Caryl Brahms and SJ Simon,comedy
+1081,Illywhacker,Peter Carey,comedy
+1106,A Season in Sinji,JL Carr,comedy
+1140,The Harpole Report,JL Carr,comedy
+1153,The Hearing Trumpet,Leonora Carrington,comedy
+1212,Mister Johnson,Joyce Cary,comedy
+1307,The Horse's Mouth,Joyce Cary,comedy
+1375,Don Quixote,Miguel de Cervantes,comedy
+1411,The Case of the Gilded Fly,Edmund Crispin,comedy
+1455,Just William,Richmal Crompton,comedy
+1531,The Provincial Lady,EM Delafield,comedy
+1621,Slouching Towards Kalamazoo,Peter De Vries,comedy
+1630,The Pickwick Papers,Charles Dickens,comedy
+1661,Martin Chuzzlewit,Charles Dickens,comedy
+1716,Jacques the Fatalist and his Master,Denis Diderot,comedy
+1721,A Fairy Tale of New York,JP Donleavy,comedy
+1811,The Commitments,Roddy Doyle,comedy
+1848,Ennui,Maria Edgeworth,comedy
+1869,Cheese,Willem Elsschot,comedy
+1950,Bridget Jones's Diary,Helen Fielding,comedy
+1966,Joseph Andrews,Henry Fielding,comedy
+2061,Tom Jones,Henry Fielding,comedy
+2088,Caprice,Ronald Firbank,comedy
+2120,Bouvard et Pécuchet,Gustave Flaubert,comedy
+2146,Towards the End of the Morning,Michael Frayn,comedy
+2219,The Polygots,William Gerhardie,comedy
+2282,Cold Comfort Farm,Stella Gibbons,comedy
+2342,Dead Souls,Nikolai Gogol,comedy
+2424,Oblomov,Ivan Goncharov,comedy
+2431,The Wind in the Willows,Kenneth Grahame,comedy
+2439,Brewster's Millions,Richard Greaves (George Barr McCutcheon),comedy
+2471,Squire Haggard's Journal,Michael Green,comedy
+2498,Our Man in Havana,Graham Greene,comedy
+2530,Travels with My Aunt,Graham Greene,comedy
+2567,Diary of a Nobody,George Grossmith,comedy
+2609,The Little World of Don Camillo,Giovanni Guareschi,comedy
+2690,The Curious Incident of the Dog in the Night-time,Mark Haddon,comedy
+2691,Catch-22,Joseph Heller,comedy
+2709,Mr Blandings Builds His Dream House,Eric Hodgkins,comedy
+2773,High Fidelity,Nick Hornby,comedy
+2795,I Served the King of England,Bohumil Hrabal,comedy
+2832,The Lecturer's Tale,James Hynes,comedy
+2840,Mr Norris Changes Trains,Christopher Isherwood,comedy
+2926,The Mighty Walzer Howard,Jacobson,comedy
+2991,Pictures from an Institution,Randall Jarrell,comedy
+3012,Three Men in a Boat,Jerome K Jerome,comedy
+3083,Finnegans Wake,James Joyce,comedy
+3142,The Castle,Franz Kafka,comedy
+3228,Lake Wobegon Days,Garrison Keillor,comedy
+3273,Death and the Penguin,Andrey Kurkov,comedy
+3361,The Debt to Pleasure,John Lanchester,comedy
+3371,L'Histoire de Gil Blas de Santillane (Gil Blas),Alain-René Lesage,comedy
+3443,Changing Places,David Lodge,comedy
+3484,Nice Work,David Lodge,comedy
+3527,The Towers of Trebizond,Rose Macaulay,comedy
+3588,"England, Their England",AG Macdonell,comedy
+3595,Whisky Galore,Compton Mackenzie,comedy
+3663,Memoirs of a Gnostic Dwarf,David Madsen,comedy
+3761,"Cakes and Ale - Or, the Skeleton in the Cupboard",W Somerset Maugham,comedy
+3833,Tales of the City,Armistead Maupin,comedy
+3881,"Bright Lights, Big City",Jay McInerney,comedy
+3904,Puckoon,Spike Milligan,comedy
+3908,The Restraint of Beasts,Magnus Mills,comedy
+3924,Charade,John Mortimer,comedy
+3953,Titmuss Regained,John Mortimer,comedy
+4021,Under the Net,Iris Murdoch,comedy
+4107,Pnin,Vladimir Nabokov,comedy
+4139,Pale Fire,Vladimir Nabokov,comedy
+4228,Fireflies,Shiva Naipaul,comedy
+4320,The Sacred Book of the Werewolf,Victor Pelevin,comedy
+4386,La Disparition,Georges Perec,comedy
+4465,Les Revenentes,Georges Perec,comedy
+4517,La Vie Mode d'Emploi,Georges Perec,comedy
+4549,My Search for Warren Harding,Robert Plunkett,comedy
+4626,A Dance to the Music of Time,Anthony Powell,comedy
+4702,A Time to be Born,Dawn Powell,comedy
+4741,Excellent Women,Barbara Pym,comedy
+4828,Less Than Angels,Barbara Pym,comedy
+4871,Zazie in the Metro,Raymond Queneau,comedy
+4919,Solomon Gursky Was Here,Mordecai Richler,comedy
+4934,Alms for Oblivion,Simon Raven,comedy
+4974,Portnoy's Complaint,Philip Roth,comedy
+5032,The Westminster Alice,Saki,comedy
+5103,The Unbearable Bassington,Saki,comedy
+5146,Hurrah for St Trinian's,Ronald Searle,comedy
+5167,Great Apes,Will Self,comedy
+5214,Porterhouse Blue,Tom Sharpe,comedy
+5230,Blott on the Landscape,Tom Sharpe,comedy
+5308,Office Politics,Wilfrid Sheed,comedy
+5374,Belles Lettres Papers: A Novel,Charles Simmons,comedy
+5435,Moo,Jane Smiley,comedy
+5437,Topper Takes a Trip,Thorne Smith,comedy
+5519,The Adventures of Ferdinand Count Fathom,Tobias Smollett,comedy
+5563,The Adventures of Roderick Random,Tobias Smollett,comedy
+5586,The Adventures of Peregrine Pickle,Tobias Smollett,comedy
+5612,The Expedition of Humphry Clinker,Tobias Smollett,comedy
+5666,The Prime of Miss Jean Brodie,Muriel Spark,comedy
+5683,The Girls of Slender Means,Muriel Spark,comedy
+5738,The Driver's Seat,Muriel Spark,comedy
+5788,Loitering with Intent,Muriel Spark,comedy
+5853,A Far Cry from Kensington,Muriel Spark,comedy
+5888,"The Life and Opinions of Tristram Shandy, Gentleman",Laurence Sterne,comedy
+5982,White Man Falling,Mike Stocks,comedy
+6069,Handley Cross,RS Surtees,comedy
+6084,A Tale of a Tub,Jonathan Swift,comedy
+6167,Penrod,Booth Tarkington,comedy
+6241,The Luck of Barry Lyndon,William Makepeace Thackeray,comedy
+6301,Before Lunch,Angela Thirkell,comedy
+6394,Tropic of Ruislip,Leslie Thomas,comedy
+6396,A Confederacy of Dunces,John Kennedy Toole,comedy
+6426,Barchester Towers,Anthony Trollope,comedy
+6496,Venus on the Half-Shell,Kilgore Trout,comedy
+6514,The Mysterious Stranger,Mark Twain,comedy
+6596,The Witches of Eastwick,John Updike,comedy
+6623,Breakfast of Champions,Kurt Vonnegut,comedy
+6643,Infinite Jest,David Foster Wallace,comedy
+6716,Decline and Fall,Evelyn Waugh,comedy
+6735,Vile Bodies,Evelyn Waugh,comedy
+6795,Black Mischief,Evelyn Waugh,comedy
+6851,Scoop,Evelyn Waugh,comedy
+6854,The Loved One,Evelyn Waugh,comedy
+6874,A Handful of Dust,Evelyn Waugh,comedy
+6921,The Life and Loves of a She-Devil,Fay Weldon,comedy
+6976,Tono Bungay,HG Wells,comedy
+7000,Molesworth,Geoffrey Willans and Ronald Searle,comedy
+7081,The Wimbledon Poisoner,Nigel Williams,comedy
+7130,Anglo-Saxon Attitudes,Angus Wilson,comedy
+7150,Something Fresh,PG Wodehouse,comedy
+7171,Piccadilly Jim,PG Wodehouse,comedy
+7258,Thank You Jeeves,PG Wodehouse,comedy
+7294,Heavy Weather,PG Wodehouse,comedy
+7361,The Code of the Woosters,PG Wodehouse,comedy
+7384,Joy in the Morning,PG Wodehouse,comedy
+7462,The Man with the Golden Arm,Nelson Algren,crime
+7530,Fantomas,Marcel Allain and Pierre Souvestre,crime
+7530,The Mask of Dimitrios,Eric Ambler,crime
+7546,Epitaph for a Spy,Eric Ambler,crime
+7566,Journey into Fear,Eric Ambler,crime
+7600,The New York Trilogy,Paul Auster,crime
+7620,Trent's Last Case,EC Bentley,crime
+7704,The Poisoned Chocolates Case,Anthony Berkeley,crime
+7713,The Beast Must Die,Nicholas Blake,crime
+7766,Lady Audley's Secret,Mary E Braddon,crime
+7797,The Neon Rain,James Lee Burke,crime
+7880,The Tin Roof Blowdown,James Lee Burke,crime
+7882,The Thirty-Nine Steps,John Buchan,crime
+7923,Greenmantle,John Buchan,crime
+7930,The Asphalt Jungle,WR Burnett,crime
+7998,The Postman Always Rings Twice,James M Cain,crime
+8065,Double Indemnity,James M Cain,crime
+8069,True History of the Ned Kelly Gang,Peter Carey,crime
+8126,The Hollow Man,John Dickson Carr,crime
+8193,The Big Sleep,Raymond Chandler,crime
+8199,The Long Goodbye,Raymond Chandler,crime
+8293,No Orchids for Miss Blandish,James Hadley Chase,crime
+8366,The Riddle of the Sands,Erskine Childers,crime
+8425,And Then There Were None,Agatha Christie,crime
+8452,The Mysterious Affair at Styles,Agatha Christie,crime
+8523,The Murder of Roger Ackroyd,Agatha Christie,crime
+8542,The Murder at the Vicarage,Agatha Christie,crime
+8596,The Secret Adversary,Agatha Christie,crime
+8605,The Woman in White,Wilkie Collins,crime
+8617,The Moonstone,Wilkie Collins,crime
+8714,A Study in Scarlet,Arthur Conan Doyle,crime
+8797,The Hound of the Baskervilles,Arthur Conan Doyle,crime
+8838,The Sign of Four,Arthur Conan Doyle,crime
+8930,The Manchurian Candidate,Richard Condon,crime
+8998,The Secret Agent,Joseph Conrad,crime
+9041,Under Western Eyes,Joseph Conrad,crime
+9130,Postmortem,Patricia Cornwell,crime
+9151,The Andromeda Strain,Michael Crichton,crime
+9167,Jurassic Park,Michael Crichton,crime
+9232,Poetic Justice,Amanda Cross,crime
+9244,The Ipcress File,Len Deighton,crime
+9323,Last Seen Wearing,Colin Dexter,crime
+9333,The Remorseful Day,Colin Dexter,crime
+9411,Ratking,Michael Dibdin,crime
+9476,Dead Lagoon,Michael Dibdin,crime
+9485,Dirty Tricks,Michael Dibdin,crime
+9580,A Rich Full Death,Michael Dibdin,crime
+9627,Vendetta,Michael Dibdin,crime
+9716,Crime and Punishment,Fyodor Dostoevsky,crime
+9727,An American Tragedy,Theodore Dreiser,crime
+9762,My Cousin Rachel,Daphne du Maurier,crime
+9800,The Count of Monte Cristo,Alexandre Dumas,crime
+9812,The Pledge,Friedrich Durrenmatt,crime
+9844,The Crime of Father Amado,José Maria de Eça de Queiroz,crime
+9923,The Name of the Rose,Umberto Eco,crime
+10017,American Psycho,Bret Easton Ellis,crime
+10021,LA Confidential,James Ellroy,crime
+10027,The Big Nowhere,James Ellroy,crime
+10080,A Quiet Belief in Angels,RJ Ellory,crime
+10135,Sanctuary,William Faulkner,crime
+10234,Casino Royale,Ian Fleming,crime
+10305,Goldfinger,Ian Fleming,crime
+10392,You Only Live Twice,Ian Fleming,crime
+10447,The Day of the Jackal,Frederick Forsyth,crime
+10509,Brighton Rock,Graham Greene,crime
+10544,A Gun for Sale,Graham Greene,crime
+10630,The Ministry of Fear,Graham Greene,crime
+10664,The Third Man,Graham Greene,crime
+10695,A Time to Kill,John Grisham,crime
+10741,The King of Torts,John Grisham,crime
+10839,Hangover Square,Patrick Hamilton,crime
+10865,The Glass Key,Dashiell Hammett,crime
+10895,The Maltese Falcon,Dashiell Hammett,crime
+10928,Red Harvest,Dashiell Hammett,crime
+10984,The Thin Man,Dashiell Hammett,crime
+11026,Fatherland,Robert Harris,crime
+11102,Black Sunday,Thomas Harris,crime
+11189,Red Dragon,Thomas Harris,crime
+11255,Tourist Season,Carl Hiaasen,crime
+11256,The Friends of Eddie Coyle,George V Higgins,crime
+11308,Strangers on a Train,Patricia Highsmith,crime
+11352,The Talented Mr Ripley,Patricia Highsmith,crime
+11400,Bones and Silence,Reginald Hill,crime
+11464,A Rage in Harlem,Chester Himes,crime
+11535,Miss Smilla's Feeling for Snow,Peter Hoeg,crime
+11555,Rogue Male,Geoffrey Household,crime
+11555,Malice Aforethought,Francis Iles,crime
+11610,Silence of the Grave,Arnadur Indridason,crime
+11638,Death at the President's Lodging,Michael Innes,crime
+11714,Cover Her Face,PD James,crime
+11780,A Taste for Death,PD James,crime
+11805,Friday the Rabbi Slept Late,Harry Kemelman,crime
+11875,Misery,Stephen King,crime
+11936,Dolores Claiborne,Stephen King,crime
+12012,Kim,Rudyard Kipling,crime
+12023,The Constant Gardener,John le Carre,crime
+12031,"Tinker, Tailor, Soldier, Spy",John le Carre,crime
+12042,The Spy Who Came in from the Cold,John le Carre,crime
+12067,To Kill a Mockingbird,Harper Lee,crime
+12130,52 Pick-up,Elmore Leonard,crime
+12193,Get Shorty,Elmore Leonard,crime
+12283,Motherless Brooklyn,Jonathan Lethem,crime
+12347,The Bourne Identity,Robert Ludlum,crime
+12353,Cop Hater,Ed McBain,crime
+12391,No Country for Old Men,Cormac McCarthy,crime
+12445,Enduring Love,Ian McEwan,crime
+12528,Sidetracked,Henning Mankell,crime
+12552,Devil in a Blue Dress,Walter Mosley,crime
+12594,The Great Impersonation,E Phillips Oppenheim,crime
+12631,The Strange Borders of Palace Crescent,E Phillips Oppenheim,crime
+12636,My Name is Red,Orhan Pamuk,crime
+12710,Toxic Shock,Sara Paretsky,crime
+12736,Blacklist,Sara Paretsky,crime
+12812,Nineteen Seventy Four,David Peace,crime
+12817,Nineteen Seventy Seven,David Peace,crime
+12908,The Big Blowdown,George Pelecanos,crime
+12991,Hard Revolution,George Pelecanos,crime
+13062,Lush Life,Richard Price,crime
+13141,The Godfather,Mario Puzo,crime
+13219,V,Thomas Pynchon,crime
+13295,The Crying of Lot 49,Thomas Pynchon,crime
+13299,Black and Blue,Ian Rankin,crime
+13339,The Hanging Gardens,Ian Rankin,crime
+13423,Exit Music,Ian Rankin,crime
+13502,Judgment in Stone,Ruth Rendell,crime
+13557,Live Flesh,Ruth Rendell,crime
+13559,Dissolution,CJ Sansom,crime
+13614,Whose Body?,Dorothy L Sayers,crime
+13663,Murder Must Advertise,Dorothy Le Sayers,crime
+13670,The Madman of Bergerac,Georges Simenon,crime
+13705,The Blue Room,Georges Simenon,crime
+13791,The Laughing Policeman,Maj Sjowall and Per Wahloo,crime
+13852,Gorky Park,Martin Cruz Smith,crime
+13933,Of Mice and Men,John Steinbeck,crime
+13947,The League of Frightened Men,Rex Stout,crime
+13979,Perfume,Patrick Suskind,crime
+13995,The Secret History,Donna Tartt,crime
+14057,The Daughter of Time,Josephine Tey,crime
+14147,The Getaway,Jim Thompson,crime
+14222,Pudd'nhead Wilson,Mark Twain,crime
+14264,A Dark-Adapted Eye,Barbara Vine,crime
+14349,A Fatal inversion,Barbara Vine,crime
+14361,King Solomon's Carpet,Barbara Vine,crime
+14387,The Four Just Men,Edgar Wallace,crime
+14456,Fingersmith,Sarah Waters,crime
+14459,Native Son,Richard Wright,crime
+14517,Therese Raquin,Emile Zola,crime
+14574,The Face of Another,Kobo Abe,family and self
+14617,Little Women,Louisa May Alcott,family and self
+14697,Behind the Scenes at the Museum,Kate Atkinson,family and self
+14738,Cat's Eye,Margaret Atwood,family and self
+14743,Epileptic,David B,family and self
+14836,Room Temperature,Nicholson Baker,family and self
+14874,Eugenie Grandet,Honore de Balzac,family and self
+14881,Le Pere Goriot,Honore de Balzac,family and self
+14907,The Crow Road,Iain Banks,family and self
+14943,The L Shaped Room,Lynne Reid Banks,family and self
+15003,Fun Home,Alison Bechdel,family and self
+15081,Malone Dies,Samuel Beckett,family and self
+15116,A Legacy,Sybille Bedford,family and self
+15118,Herzog,Saul Bellow,family and self
+15149,Humboldt's Gift,Saul Bellow,family and self
+15221,The Old Wives' Tale,Arnold Bennett,family and self
+15298,G,John Berger,family and self
+15336,Extinction,Thomas Bernhard,family and self
+15432,Two Serious Ladies,Jane Bowles,family and self
+15491,Any Human Heart,William Boyd,family and self
+15566,The Death of Virgil,Hermann Broch,family and self
+15604,Evelina,Fanny Burney,family and self
+15689,The Way of All Flesh,Samuel Butler,family and self
+15700,The Sound of my Voice,Ron Butlin,family and self
+15770,The Outsider,Albert Camus,family and self
+15835,Wise Children,Angela Carter,family and self
+15906,The Professor's House,Willa Cather,family and self
+15911,The Wapshot Chronicle,John Cheever,family and self
+15964,The Awakening,Kate Chopin,family and self
+16026,Les Enfants Terrible,Jean Cocteau,family and self
+16091,The Vagabond,Sidonie-Gabrielle Colette,family and self
+16124,Manservant and Maidservant,Ivy Compton-Burnett,family and self
+16222,Being Dead,Jim Crace,family and self
+16311,Quarantine,Jim Crace,family and self
+16333,The Mandarins,Simone de Beauvoir,family and self
+16340,Roxana,Daniel Defoe,family and self
+16436,Great Expectations,Charles Dickens,family and self
+16455,The Brothers Karamazov,Fyodor Dostoevsky,family and self
+16499,My New York Diary,Julie Doucet,family and self
+16579,The Millstone,Margaret Drabble,family and self
+16654,My Family and Other Animals,Gerald Durrell,family and self
+16749,Silence,Shusaku Endo,family and self
+16843,The Gathering,Anne Enright,family and self
+16914,Middlesex,Jeffrey Eugenides,family and self
+16982,As I Lay Dying,William Faulkner,family and self
+17067,The Sound and the Fury,William Faulkner,family and self
+17101,The Sportswriter,Richard Ford,family and self
+17127,Howards End,EM Forster,family and self
+17183,Spies,Michael Frayn,family and self
+17244,Hideous Kinky,Esther Freud,family and self
+17253,The Man of Property,John Galsworthy,family and self
+17289,Mary Barton,Elizabeth Gaskell,family and self
+17315,The Immoralist,Andre Gide,family and self
+17356,The Vatican Cellars,Andre Gide,family and self
+17390,The Vicar of Wakefield,Oliver Goldsmith,family and self
+17483,The Power and the Glory,Graham Greene,family and self
+17503,Hunger,Knut Hamsun,family and self
+17523,The Shrimp and the Anemone,LP Hartley,family and self
+17524,The Old Man and the Sea,Ernest Hemingway,family and self
+17604,Steppenwolf,Herman Hesse,family and self
+17615,Narziss and Goldmund,Hermann Hesse,family and self
+17704,The Three Paradoxes,Paul Hornschemeier,family and self
+17755,Tom Brown's Schooldays,Thomas Hughes,family and self
+17768,A Prayer for Owen Meany,John Irving,family and self
+17815,The Ambassadors,Henry James,family and self
+17884,Washington Square,Henry James,family and self
+17983,The Tortoise and the Hare,Elizabeth Jenkins,family and self
+17994,The Unfortunates,BS Johnson,family and self
+18035,A Portrait of the Artist as a Young Man,James Joyce,family and self
+18101,Ulysses,James Joyce,family and self
+18152,Good Behaviour,Molly Keane,family and self
+18206,Memet my Hawk,Yasar Kemal,family and self
+18227,One Flew Over the Cuckoo's Nest,Ken Kesey,family and self
+18274,The Buddha of Suburbia,Hanif Kureishi,family and self
+18322,Sons and Lovers,DH Lawrence,family and self
+18385,Cider with Rosie,Laurie Lee,family and self
+18468,Invitation to the Waltz,Rosamond Lehmann,family and self
+18536,The Golden Notebook,Doris Lessing,family and self
+18544,How Green was My Valley,Richard Llewellyn,family and self
+18612,Martin Eden,Jack London,family and self
+18619,Under the Volcano,Malcolm Lowry,family and self
+18664,The Member of the Wedding,Carson McCullers,family and self
+18750,Palace Walk,Naguib Mahfouz,family and self
+18837,The Assistant,Bernard Malamud,family and self
+18929,Buddenbrooks,Thomas Mann,family and self
+18939,The Chateau,William Maxwell,family and self
+18952,The Rector's Daughter,FM Mayor,family and self
+18965,The Ordeal of Richard Feverek,George Meredith,family and self
+19023,Family Matters,Rohinton Mistry,family and self
+19102,Sour Sweet,Timothy Mo,family and self
+19123,The Lonely Passion of Judith Hearne,Brian Moore,family and self
+19182,The Bluest Eye,Toni Morrison,family and self
+19182,Song of Solomon,Toni Morrison,family and self
+19255,Who Do You Think You Are?,Alice Munro,family and self
+19265,The Black Prince,Iris Murdoch,family and self
+19309,The Man Without Qualities,Robert Musil,family and self
+19327,A House for Mr Biswas,VS Naipaul,family and self
+19414,At-Swim-Two-Birds,Flann O'Brien,family and self
+19508,Teach Us to Outgrow Our Madness,Kezaburo Oe,family and self
+19526,The Moviegoer,Walker Percy,family and self
+19586,The Bell Jar,Sylvia Plath,family and self
+19627,My Name Is Asher Lev,Chaim Potok,family and self
+19716,The Good Companions,JB Priestley,family and self
+19724,The Shipping News,E Annie Proulx,family and self
+19775,Remembrance of Things Past,Marcel Proust,family and self
+19846,A Married Man,Piers Paul Read,family and self
+19928,Pointed Roofs,Dorothy Richardson,family and self
+19928,The Fortunes of Richard Mahoney,Henry Handel Richardson,family and self
+19940,Call it Sleep,Henry Roth,family and self
+19973,"Julie, ou la Nouvelle Heloise",Jean-Jacques Rousseau,family and self
+19979,The God of Small Things,Arundhati Roy,family and self
+20010,The Catcher in the Rye,JD Salinger,family and self
+20060,Alberta and Jacob,Cora Sandel,family and self
+20117,A Suitable Boy,Vikram Seth,family and self
+20120,Unless,Carol Shields,family and self
+20133,We Need to Talk About Kevin,Lionel Shriver,family and self
+20225,The Three Sisters,May Sinclair,family and self
+20259,The Family Moskat or The Manor or The Estate,Isaac Bashevis Singer,family and self
+20271,A Thousand Acres,Jane Smiley,family and self
+20312,On Beauty,Zadie Smith,family and self
+20352,The Man Who Loved Children,Christina Stead,family and self
+20367,East of Eden,John Steinbeck,family and self
+20425,Ballet Shoes,Noel Streatfield,family and self
+20522,Confessions of Zeno,Italo Svevo,family and self
+20586,The Magnificent Ambersons,Booth Tarkington,family and self
+20620,Angel,Elizabeth Taylor,family and self
+20679,Lark Rise to Candleford,Flora Thompson,family and self
+20710,The Blackwater Lightship,Colm Toibin,family and self
+20736,"The Secret Diary of Adrian Mole, Aged 13 3/4",Sue Townsend,family and self
+20790,Death in Summer,William Trevor,family and self
+20884,Fathers and Sons,Ivan Turgenev,family and self
+20933,Peace in War,Miguel de Unamuno,family and self
+20960,The Rabbit Omnibus,John Updike,family and self
+21041,The Color Purple,Alice Walker,family and self
+21130,"Jimmy Corrigan, The Smarest Kid on Earth",Chris Ware,family and self
+21225,Morvern Callar,Alan Warner,family and self
+21314,The History of Mr Polly,HG Wells,family and self
+21379,The Fountain Overflows,Rebecca West,family and self
+21446,Frost in May,Antonia White,family and self
+21522,The Tree of Man,Patrick White,family and self
+21534,The Picture of Dorian Gray,Oscar Wilde,family and self
+21575,Oranges Are Not the Only Fruit,Jeanette Winterson,family and self
+21650,I'll Go to Bed at Noon,Gerard Woodward,family and self
+21742,To the Lighthouse,Virginia Woolf,family and self
+21804,Mrs Dalloway,Virginia Woolf,family and self
+21891,Swiss Family Robinson,Johann David Wyss,family and self
+21990,Le Grand Meaulnes,Henri Alain-Fournier,love
+22081,Dom Casmurro Joaquim,Maria Machado de Assis,love
+22165,Northanger Abbey,Jane Austen,love
+22173,Sense and Sensibility,Jane Austen,love
+22268,Pride and Prejudice,Jane Austen,love
+22348,Mansfield Park,Jane Austen,love
+22401,Emma,Jane Austen,love
+22486,Persuasion,Jane Austen,love
+22500,Giovanni's Room,James Baldwin,love
+22532,Nightwood,Djuna Barnes,love
+22542,The Garden of the Finzi-Cortinis,Giorgio Bassani,love
+22616,Love for Lydia,HE Bates,love
+22656,More Die of Heartbreak,Saul Bellow,love
+22752,Lorna Doone,RD Blackmore,love
+22802,The Death of the Heart,Elizabeth Bowen,love
+22868,The Heat of the Day,Elizabeth Bowen,love
+22915,Jane Eyre,Charlotte Bronte,love
+23009,Vilette,Charlotte Bronte,love
+23070,Wuthering Heights,Emily Bronte,love
+23090,Look At Me,Anita Brookner,love
+23169,Rubyfruit Jungle,Rita Mae Brown,love
+23254,Possession,AS Byatt,love
+23269,Breakfast at Tiffany's,Truman Capote,love
+23270,Oscar and Lucinda,Peter Carey,love
+23317,A Month in the Country,JL Carr,love
+23384,My Antonia,Willa Cather,love
+23415,A Lost Lady,Willa Cather,love
+23510,Claudine a l'ecole,Sidonie-Gabrielle Colette,love
+23514,Cheri,Sidonie-Gabrielle Collette,love
+23593,Victory: An Island Tale,Joseph Conrad,love
+23659,The Princess of Cleves,Madame de Lafayette,love
+23712,The Parasites,Daphne du Maurier,love
+23796,Rebecca,Daphne du Maurier,love
+23807,The Lover,Marguerite Duras,love
+23894,Adam Bede,George Eliot,love
+23952,Daniel Deronda,George Eliot,love
+23997,The Mill on the Floss,George Eliot,love
+24061,The Virgin Suicides,Jeffrey Eugenides,love
+24145,The Great Gatsby,F Scott Fitzgerald,love
+24152,Tender is the Night,F Scott Fitzgerald,love
+24162,The Blue Flower,Penelope Fitzgerald,love
+24182,Madame Bovary,Gustave Flaubert,love
+24215,The Good Soldier,Ford Madox Ford,love
+24271,A Room with a View,EM Forster,love
+24302,The French Lieutenant's Woman,John Fowles,love
+24338,The Snow Goose,Paul Gallico,love
+24428,Ruth,Elizabeth Gaskell,love
+24451,Strait is the Gate,Andre Gide,love
+24464,Sunset Song,Lewis Grassic Gibbon,love
+24499,The Sorrows of Young Werther,Johann Wolfgang Goethe,love
+24517,Living,Henry Green,love
+24521,The End of the Affair,Graham Greene,love
+24533,The Well of Loneliness,Radclyffe Hall,love
+24556,Far From the Madding Crowd,Thomas Hardy,love
+24640,Jude the Obscure,Thomas Hardy,love
+24676,Tess of the D'Urbervilles,Thomas Hardy,love
+24704,The Woodlanders,Thomas Hardy,love
+24719,The Go-Between,LP Hartley,love
+24767,The Scarlet Letter,Nathaniel Hawthorne,love
+24812,The Transit of Venus,Shirley Hazzard,love
+24829,A Farewell to Arms,Ernest Hemingway,love
+24870,The Infamous Army,Georgette Heyer,love
+24898,Regency Buck,Georgette Heyer,love
+24910,The Swimming-Pool Library,Alan Hollinghurst,love
+24986,Green Mansions: A Romance of the Tropical Forest,WH Hudson,love
+25005,Their Eyes Were Watching God,Zora Neale Hurston,love
+25028,Crome Yellow,Aldous Huxley,love
+25063,The Remains of the Day,Kazuo Ishiguro,love
+25123,Portrait of a Lady,Henry James,love
+25178,The Wings of the Dove,Henry James,love
+25194,The Piano Teacher,Elfriede Jelinek,love
+25267,Beauty and Saddness,Yasunari Kawabata,love
+25308,The Far Pavillions,Mary Margaret Kaye,love
+25364,Zorba the Greek,Nikos Kazantzakis,love
+25405,Moon over Africa,Pamela Kent,love
+25412,The Book of Laughter and Forgetting,Milan Kundera,love
+25434,The Unbearable Lightness of Being,Milan Kundera,love
+25498,Les Liaisons Dangereuses,Pierre-Ambroise-Francois Choderlos de Laclos,love
+25507,Lady Chatterley's Lover,DH Lawrence,love
+25549,The Rainbow,DH Lawrence,love
+25614,Women in Love,DH Lawrence,love
+25675,The Echoing Grove,Rosamond Lehmann,love
+25739,The Weather in the Streets,Rosamond Lehmann,love
+25770,Gentlemen Prefer Blondes,Anita Loos,love
+25822,Zami,Audre Lorde,love
+25831,Foreign Affairs,Alison Lurie,love
+25857,Samarkand,Amin Maalouf,love
+25863,Death in Venice,Thomas Mann,love
+25960,The Silent Duchess,Dacia Maraini,love
+25989,A Heart So White,Javier Marias,love
+26078,Love in the Time of Cholera,Gabriel Garcia Marquez,love
+26160,Of Human Bondage,Somerset Maugham,love
+26198,"So Long, See you Tomorrow",William Maxwell,love
+26236,The Heart is a Lonely Hunter,Carson McCullers,love
+26244,Atonement,Ian McEwan,love
+26278,The Child in Time,Ian McEwan,love
+26359,The Egoist,George Meredith,love
+26453,Tropic of Cancer,Henry Miller,love
+26485,Patience and Sarah,Isabel Miller,love
+26493,Gone With the Wind,Margaret Mitchell,love
+26585,The Pursuit of Love,Nancy Mitford,love
+26662,Love in a Cold Climate,Nancy Mitford,love
+26683,Arturo's Island,Elsa Morante,love
+26755,Norwegian Wood,Haruki Murakami,love
+26822,"Lolita, or the Confessions of a White Widowed Male",Vladimir Nabokov,love
+26855,The Painter of Signs,RK Narayan,love
+26882,Delta of Venus,Anais Nin,love
+26966,All Souls Day,Cees Nooteboom,love
+26984,The English Patient,Michael Ondaatje,love
+26985,Doctor Zhivago,Boris Pasternak,love
+27023,Manon Lescaut,Abbe Prevost,love
+27089,Wide Sargasso Sea,Jean Rhys,love
+27089,Maurice Guest,Henry Handel Richardson,love
+27099,Pamela,Samuel Richardson,love
+27196,Clarissa,Samuel Richardson,love
+27272,Gilead,Marilynne Robinson,love
+27316,Bonjour Tristesse,Francoise Sagan,love
+27371,Ali and Nino,Kurban Said,love
+27395,Light Years,James Salter,love
+27456,A Sport and a Passtime,James Salter,love
+27536,The Reader,Benhardq Schlink,love
+27635,The Reluctant Orphan,Aara Seale,love
+27730,Love Story,Eric Segal,love
+27749,"Enemies, a Love Story",Isaac Bashevis Singer,love
+27768,At Grand Central Station I Sat Down and Wept,Elizabeth Smart,love
+27825,I Capture the Castle,Dodie Smith,love
+27845,The Map of Love,Ahdaf Soueif,love
+27910,Valley of the Dolls,Jacqueline Susann,love
+27953,Waterland,Graham Swift,love
+28029,Diary of a Mad Old Man,Junichiro Tanizaki,love
+28106,Anna Karenina,Leo Tolstoy,love
+28173,Music and Silence,Rose Tremain,love
+28259,First Love,Ivan Turgenev,love
+28349,Breathing Lessons,Anne Tyler,love
+28365,The Accidental Tourist,Anne Tyler,love
+28391,The Night Watch,Sarah Waters,love
+28428,The Graduate,Charles Webb,love
+28443,The Age of Innocence,Edith Wharton,love
+28485,The Passion,Jeanette Winterson,love
+28531,East Lynne,Ellen Wood,love
+28541,Revolutionary Road,Richard Yates,love
+28584,The Hitchhikers Guide to the Galaxy,Douglas Adams,science fiction and fantasy
+28630,Non-Stop,Brian W Aldiss,science fiction and fantasy
+28682,Foundation,Isaac Asimov,science fiction and fantasy
+28682,The Blind Assassin,Margaret Atwood,science fiction and fantasy
+28718,The Handmaid's Tale,Margaret Atwood,science fiction and fantasy
+28789,In the Country of Last Things,Paul Auster,science fiction and fantasy
+28832,The Drowned World,JG Ballard,science fiction and fantasy
+28856,Crash,JG Ballard,science fiction and fantasy
+28899,Millennium People,JG Ballard,science fiction and fantasy
+28909,The Wasp Factory,Iain Banks,science fiction and fantasy
+28968,Consider Phlebas,Iain M Banks,science fiction and fantasy
+29004,Weaveworld,Clive Barker,science fiction and fantasy
+29075,Darkmans,Nicola Barker,science fiction and fantasy
+29091,The Time Ships,Stephen Baxter,science fiction and fantasy
+29125,Darwin's Radio,Greg Bear,science fiction and fantasy
+29166,Vathek,William Beckford,science fiction and fantasy
+29187,The Stars My Destination,Alfred Bester,science fiction and fantasy
+29213,Fahrenheit 451,Ray Bradbury,science fiction and fantasy
+29298,Lost Souls,Poppy Z Brite,science fiction and fantasy
+29356,Wieland,Charles Brockden Brown,science fiction and fantasy
+29418,Rogue Moon,Algis Budrys,science fiction and fantasy
+29466,The Master and Margarita,Mikhail Bulgakov,science fiction and fantasy
+29485,The Coming Race,EGEL Bulwer-Lytton,science fiction and fantasy
+29519,A Clockwork Orange,Anthony Burgess,science fiction and fantasy
+29532,The End of the World News,Anthony Burgess,science fiction and fantasy
+29545,A Princess of Mars,Edgar Rice Burroughs,science fiction and fantasy
+29582,Naked Lunch,William Burroughs,science fiction and fantasy
+29673,Kindred,Octavia Butler,science fiction and fantasy
+29710,Erewhon,Samuel Butler,science fiction and fantasy
+29725,The Baron in the Trees,Italo Calvino,science fiction and fantasy
+29735,The Influence,Ramsey Campbell,science fiction and fantasy
+29809,Alice's Adventures in Wonderland,Lewis Carroll,science fiction and fantasy
+29844,Through the Looking Glass and What Alice Found There,Lewis Carroll,science fiction and fantasy
+29938,Nights at the Circus,Angela Carter,science fiction and fantasy
+30009,The Passion of New Eve,Angela Carter,science fiction and fantasy
+30056,The Amazing Adventures of Kavalier and Clay,Michael Chabon,science fiction and fantasy
+30071,The Man who was Thursday,GK Chesterton,science fiction and fantasy
+30097,Childhood's End,Arthur C Clarke,science fiction and fantasy
+30113,Jonathan Strange & Mr Norrell,Susanna Clarke,science fiction and fantasy
+30116,"Hello Summer, Goodbye",Michael G Coney,science fiction and fantasy
+30121,Girlfriend in a Coma,Douglas Coupland,science fiction and fantasy
+30189,House of Leaves,Mark Danielewski,science fiction and fantasy
+30226,Pig Tales,Marie Darrieussecq,science fiction and fantasy
+30274,The Einstein Intersection,Samuel R Delaney,science fiction and fantasy
+30325,Do Androids Dream of Electric Sheep?,Philip K Dick,science fiction and fantasy
+30381,The Man in the High Castle,Philip K Dick,science fiction and fantasy
+30389,Camp Concentration,Thomas M Disch,science fiction and fantasy
+30413,Foucault's Pendulum,Umberto Eco,science fiction and fantasy
+30448,Under the Skin,Michel Faber,science fiction and fantasy
+30531,The Magus,John Fowles,science fiction and fantasy
+30559,American Gods,Neil Gaiman,science fiction and fantasy
+30634,Red Shift,Alan Garner,science fiction and fantasy
+30660,Neuromancer,William Gibson,science fiction and fantasy
+30754,Herland,Charlotte Perkins Gilman,science fiction and fantasy
+30808,Lord of the Flies,William Golding,science fiction and fantasy
+30814,The Forever War,Joe Haldeman,science fiction and fantasy
+30814,Light,M John Harrison,science fiction and fantasy
+30907,The House of the Seven Gables,Nathaniel Hawthorne,science fiction and fantasy
+30962,Stranger in a Strange Land,Robert A Heinlein,science fiction and fantasy
+31029,Dune,Frank L Herbert,science fiction and fantasy
+31042,The Glass Bead Game,Herman Hesse,science fiction and fantasy
+31064,Riddley Walker,Russell Hoban,science fiction and fantasy
+31154,The Private Memoirs and Confessions of a Justified Sinner,James Hogg,science fiction and fantasy
+31159,Atomised,Michel Houellebecq,science fiction and fantasy
+31186,Brave New World,Aldous Huxley,science fiction and fantasy
+31285,The Unconsoled,Kazuo Ishiguro,science fiction and fantasy
+31338,The Haunting of Hill House,Shirley Jackson,science fiction and fantasy
+31391,The Turn of the Screw,Henry James,science fiction and fantasy
+31408,The Children of Men,PD James,science fiction and fantasy
+31467,"After London; or, Wild England",Richard Jefferies,science fiction and fantasy
+31486,Bold as Love,Gwyneth Jones,science fiction and fantasy
+31506,The Trial,Franz Kafka,science fiction and fantasy
+31541,Flowers for Algernon,Daniel Keyes,science fiction and fantasy
+31589,The Shining,Stephen King,science fiction and fantasy
+31625,The Victorian Chaise-longue,Marghanita Laski,science fiction and fantasy
+31695,Uncle Silas,Joseph Sheridan Le Fanu,science fiction and fantasy
+31753,The Earthsea Series,Ursula Le Guin,science fiction and fantasy
+31753,The Left Hand of Darkness,Ursula Le Guin,science fiction and fantasy
+31763,Solaris,Stanislaw Lem,science fiction and fantasy
+31775,Memoirs of a Survivor,Doris Lessing,science fiction and fantasy
+31867,The Chronicles of Narnia,CS Lewis,science fiction and fantasy
+31916,The Monk,Matthew Lewis,science fiction and fantasy
+31963,A Voyage to Arcturus,David Lindsay,science fiction and fantasy
+32015,The Night Sessions,Ken Macleod,science fiction and fantasy
+32067,Beyond Black,Hilary Mantel,science fiction and fantasy
+32071,Only Forward,Michael Marshall Smith,science fiction and fantasy
+32094,I Am Legend,Richard Matheson,science fiction and fantasy
+32174,Melmoth the Wanderer,Charles Maturin,science fiction and fantasy
+32273,The Butcher Boy,Patrick McCabe,science fiction and fantasy
+32344,The Road,Cormac McCarthy,science fiction and fantasy
+32423,Ascent,Jed Mercurio,science fiction and fantasy
+32515,The Scar,China Mieville,science fiction and fantasy
+32606,Ingenious Pain,Andrew Miller,science fiction and fantasy
+32693,A Canticle for Leibowitz,Walter M Miller Jr,science fiction and fantasy
+32758,Cloud Atlas,David Mitchell,science fiction and fantasy
+32825,Mother London,Michael Moorcock,science fiction and fantasy
+32899,News from Nowhere,William Morris,science fiction and fantasy
+32953,Beloved,Toni Morrison,science fiction and fantasy
+33037,The Wind-Up Bird Chronicle,Haruki Murakami,science fiction and fantasy
+33051,Ada or Ardor,Vladimir Nabokov,science fiction and fantasy
+33102,The Time Traveler's Wife,Audrey Niffenegger,science fiction and fantasy
+33136,Ringworld,Larry Niven,science fiction and fantasy
+33223,Vurt,Jeff Noon,science fiction and fantasy
+33223,The Third Policeman,Flann O'Brien,science fiction and fantasy
+33300,The Famished Road,Ben Okri,science fiction and fantasy
+33374,Nineteen Eighty-Four,George Orwell,science fiction and fantasy
+33381,Fight Club,Chuck Palahniuk,science fiction and fantasy
+33477,Nightmare Abbey,Thomas Love Peacock,science fiction and fantasy
+33539,Titus Groan,Mervyn Peake,science fiction and fantasy
+33600,The Space Merchants,Frederik Pohl and CM Kornbluth,science fiction and fantasy
+33644,A Glastonbury Romance,John Cowper Powys,science fiction and fantasy
+33679,The Discworld Series,Terry Pratchett,science fiction and fantasy
+33725,The Prestige,Christopher Priest,science fiction and fantasy
+33818,His Dark Materials,Philip Pullman,science fiction and fantasy
+33887,Gargantua and Pantagruel,Francois Rabelais,science fiction and fantasy
+33930,The Mysteries of Udolpho,Ann Radcliffe,science fiction and fantasy
+34000,Revelation Space,Alastair Reynolds,science fiction and fantasy
+34071,The Years of Rice and Salt,Kim Stanley Robinson,science fiction and fantasy
+34087,Harry Potter and the Philosopher's Stone,JK Rowling,science fiction and fantasy
+34179,Satanic Verses,Salman Rushdie,science fiction and fantasy
+34240,The Female Man,Joanna Russ,science fiction and fantasy
+34315,Air,Geoff Ryman,science fiction and fantasy
+34366,The Little Prince,Antoine de Saint-Exupery,science fiction and fantasy
+34425,Blindness,Jose Saramago,science fiction and fantasy
+34446,How the Dead Live,Will Self,science fiction and fantasy
+34469,Frankenstein,Mary Shelley,science fiction and fantasy
+34516,Hyperion,Dan Simmons,science fiction and fantasy
+34585,Star Maker,Olaf Stapledon,science fiction and fantasy
+34656,Snow Crash,Neal Stephenson,science fiction and fantasy
+34747,The Strange Case of Dr Jekyll and Mr Hyde,Robert Louis Stevenson,science fiction and fantasy
+34816,Dracula,Bram Stoker,science fiction and fantasy
+34907,The Insult,Rupert Thomson,science fiction and fantasy
+34918,The Hobbit,JRR Tolkien,science fiction and fantasy
+34979,The Lord of the Rings,JRR Tolkien,science fiction and fantasy
+35012,A Connecticut Yankee in King Arthur's Court,Mark Twain,science fiction and fantasy
+35070,Sirens of Titan,Kurt Vonnegut,science fiction and fantasy
+35164,The Castle of Otranto,Horace Walpole,science fiction and fantasy
+35221,Institute Benjamenta,Robert Walser,science fiction and fantasy
+35260,Lolly Willowes,Sylvia Townsend Warner,science fiction and fantasy
+35266,Affinity,Sarah Waters,science fiction and fantasy
+35359,The Time Machine,HG Wells,science fiction and fantasy
+35373,The War of the Worlds,HG Wells,science fiction and fantasy
+35422,The Sword in the Stone,TH White,science fiction and fantasy
+35451,The Old Men at the Zoo,Angus Wilson,science fiction and fantasy
+35539,The Book of the New Sun,Gene Wolfe,science fiction and fantasy
+35571,Orlando,Virginia Woolf,science fiction and fantasy
+35588,Day of the Triffids,John Wyndham,science fiction and fantasy
+35630,The Midwich Cuckoos,John Wyndham,science fiction and fantasy
+35701,We,Yevgeny Zamyatin,science fiction and fantasy
+35757,Things Fall Apart,Chinua Achebe,state of the nation
+35850,Anthills of the Savannah,Chinua Achebe,state of the nation
+35929,London Fields,Martin Amis,state of the nation
+35987,Untouchable,Mulk Raj Anand,state of the nation
+36066,Go Tell it on the Mountain,James Baldwin,state of the nation
+36124,La Comedie Humaine,Honore de Balzac,state of the nation
+36172,They Were Counted,Miklos Banffy,state of the nation
+36212,A Kind of Loving,Stan Barstow,state of the nation
+36212,Uncle Tom's Cabin,Harriet Beecher Stowe,state of the nation
+36226,"Oroonoko, or The Royal Slave",Aphra Behn,state of the nation
+36303,Clayhanger,Arnold Bennett,state of the nation
+36339,The Last September,Elizabeth Bowen,state of the nation
+36417,Room at the Top,John Braine,state of the nation
+36499,A Dry White Season,Andre Brink,state of the nation
+36580,Shirley,Charlotte Bronte,state of the nation
+36655,Earthly Powers,Anthony Burgess,state of the nation
+36742,The Virgin in the Garden,AS Byatt,state of the nation
+36802,Tobacco Road,Erskine Caldwell,state of the nation
+36901,The Plague,Albert Camus,state of the nation
+36961,The Kingdom of this World,Alejo Carpentier,state of the nation
+36977,What a Carve Up!,Jonathan Coe,state of the nation
+37037,Disgrace,JM Coetzee,state of the nation
+37123,Waiting for the Barbarians,JM Coeztee,state of the nation
+37144,Microserfs,Douglas Coupland,state of the nation
+37195,Moll Flanders,Daniel Defoe,state of the nation
+37228,Underworld,Don DeLillo,state of the nation
+37307,White Noise,Don DeLillo,state of the nation
+37360,A Tale of Two Cities,Charles Dickens,state of the nation
+37415,Bleak House,Charles Dickens,state of the nation
+37422,Dombey and Son,Charles Dickens,state of the nation
+37521,Hard Times,Charles Dickens,state of the nation
+37598,Little Dorritt,Charles Dickens,state of the nation
+37640,Oliver Twist,Charles Dickens,state of the nation
+37652,Play It As It Lays,Joan Didion,state of the nation
+37673,Sybil or The Two Nations,Benjamin Disraeli,state of the nation
+37709,Berlin Alexanderplatz,Alfred Döblin,state of the nation
+37802,The Book of Daniel,EL Doctorow,state of the nation
+37805,Notes from the Underground,Fyodor Dostoevsky,state of the nation
+37831,The Idiot,Fyodor Dostoevsky,state of the nation
+37896,USA,John Dos Passos,state of the nation
+37902,Sister Carrie,Theodor Dreiser,state of the nation
+37963,Castle Rackrent,Maria Edgeworth,state of the nation
+37998,Middlemarch,George Eliot,state of the nation
+38021,Silas Marner,George Eliot,state of the nation
+38100,The Invisible Man,Ralph Ellison,state of the nation
+38138,Sentimental Education,Gustave Flaubert,state of the nation
+38189,Effi Briest,Theodore Fontane,state of the nation
+38286,Independence Day,Richard Ford,state of the nation
+38293,A Passage to India,EM Forster,state of the nation
+38349,The Corrections,Jonathan Franzen,state of the nation
+38392,The Recognitions,William Gaddis,state of the nation
+38409,Cranford,Elizabeth Gaskell,state of the nation
+38488,North and South,Elizabeth Gaskell,state of the nation
+38562,The Counterfeiters,Andre Gide,state of the nation
+38625,The Odd Women,George Gissing,state of the nation
+38627,New Grub Street,George Gissing,state of the nation
+38690,July's People,Nadine Gordimer,state of the nation
+38698,Mother,Maxim Gorky,state of the nation
+38779,Lanark,Alastair Gray,state of the nation
+38787,Love on the Dole,Walter Greenwood,state of the nation
+38804,The Mayor of Casterbridge,Thomas Hardy,state of the nation
+38899,A Kestrel for a Knave,Barry Hines,state of the nation
+38933,The Line of Beauty,Alan Hollinghurst,state of the nation
+38998,South Riding,Winifred Holtby,state of the nation
+39050,Les Miserables,Victor Hugo,state of the nation
+39103,Goodbye to Berlin,Christopher Isherwood,state of the nation
+39178,Chronicle in Stone,Ismael Kadare,state of the nation
+39207,"How Late it Was, How Late",James Kelman,state of the nation
+39236,The Leopard,Giuseppi di Lampedusa,state of the nation
+39276,A Girl in Winter,Philip Larkin,state of the nation
+39311,Passing,Nella Larsen,state of the nation
+39320,The Grass is Singing,Doris Lessing,state of the nation
+39375,Babbitt,Sinclair Lewis,state of the nation
+39425,Elmer Gantry,Sinclair Lewis,state of the nation
+39429,Main Street,Sinclair Lewis,state of the nation
+39484,Absolute Beginners,Colin MacInnes,state of the nation
+39531,The Group,Mary McCarthy,state of the nation
+39620,Amongst Women,John McGahern,state of the nation
+39701,The Posthumous Memoirs of Bras Cubas,Joaquim Maria Machado de Assis,state of the nation
+39755,Of Love & Hunger,Julian Maclaren-Ross,state of the nation
+39837,Remembering Babylon,David Malouf,state of the nation
+39904,The Magic Mountain,Thomas Mann,state of the nation
+39930,The Betrothed,Alessandro Manzoni,state of the nation
+39989,Bel-Ami,Guy de Maupassant,state of the nation
+40079,A Fine Balance,Rohinton Mistry,state of the nation
+40145,The Time of Indifference,Alberto Moravia,state of the nation
+40199,A Bend in the River,VS Naipaul,state of the nation
+40238,McTeague,Frank Norris,state of the nation
+40274,Personality,Andrew O'Hagan,state of the nation
+40279,Animal Farm,George Orwell,state of the nation
+40288,The Ragazzi Pier,Paolo Pasolini,state of the nation
+40329,"Cry, the Beloved Country",Alan Paton,state of the nation
+40417,The Moon and the Bonfire,Cesare Pavese,state of the nation
+40431,GB84,David Peace,state of the nation
+40495,Headlong Hall,Thomas Love Peacock,state of the nation
+40546,Afternoon Men,Anthony Powell,state of the nation
+40567,Vineland,Thomas Pynchon,state of the nation
+40637,The Radetzky March,Joseph Roth,state of the nation
+40695,American Pastoral,Philip Roth,state of the nation
+40730,The Human Stain,Philip Roth,state of the nation
+40800,Midnight's Children,Salman Rushdie,state of the nation
+40824,Shame,Salman Rushdie,state of the nation
+40895,To Each his Own,Leonardo Sciascia,state of the nation
+40980,Staying On,Paul Scott,state of the nation
+40993,Last Exit to Brooklyn,Hubert Selby Jr,state of the nation
+41085,The Lonely Londoners,Samuel Selvon,state of the nation
+41169,God's Bit of Wood,Ousmane Sembene,state of the nation
+41183,The Case of Comrade Tulayev,Victor Serge,state of the nation
+41267,Richshaw Boy,Lao She,state of the nation
+41271,Saturday Night and Sunday Morning,Alan Sillitoe,state of the nation
+41330,The Jungle,Upton Sinclair,state of the nation
+41338,Novel on Yellow Paper,Stevie Smith,state of the nation
+41424,White Teeth,Zadie Smith,state of the nation
+41432,One Day in the Life of Ivan Denisovtich,Alexandr Solzhenitsyn,state of the nation
+41477,The Grapes of Wrath,John Steinbeck,state of the nation
+41545,The Red and the Black,Stendhal,state of the nation
+41607,This Sporting Life,David Storey,state of the nation
+41692,The Red Room,August Stringberg,state of the nation
+41698,The Home and the World,Rabindranath Tagore,state of the nation
+41797,Vanity Fair,William Makepeace Thackeray,state of the nation
+41860,The Ragged Trousered Philanthropists,Robert Tressell,state of the nation
+41861,The Last Chronicle of Barset,Anthony Trollope,state of the nation
+41862,The Way We Live Now,Anthony Trollope,state of the nation
+41936,The Adventures of Tom Sawyer,Mark Twain,state of the nation
+42035,Couples,John Updike,state of the nation
+42083,Z,Vassilis Vassilikos,state of the nation
+42085,Billy Liar,Keith Waterhouse,state of the nation
+42112,Trainspotting,Irvine Welsh,state of the nation
+42160,The Day of the Locust,Nathanael West,state of the nation
+42244,The Return of the Soldier,Rebecca West,state of the nation
+42266,The House of Mirth,Edith Wharton,state of the nation
+42268,The Bonfire of the Vanities,Tom Wolfe,state of the nation
+42340,Germinal,Emile Zola,state of the nation
+42429,La Bete Humaine,Emile Zola,state of the nation
+42522,Silver Stallion,Junghyo Ahn,war and travel
+42613,Death of a Hero,Richard Aldington,war and travel
+42700,Master Georgie,Beryl Bainbridge,war and travel
+42776,Darkness Falls from the Air,Nigel Balchin,war and travel
+42853,Empire of the Sun,JG Ballard,war and travel
+42869,Regeneration,Pat Barker,war and travel
+42932,A Long Long Way,Sebastian Barry,war and travel
+42971,Fair Stood the Wind for France,HE Bates,war and travel
+43063,Carrie's War,Nina Bawden,war and travel
+43103,The Savage Detectives,Roberto Bolano,war and travel
+43194,The Sheltering Sky,Paul Bowles,war and travel
+43208,An Ice-Cream War,William Boyd,war and travel
+43217,When the Wind Blows,Raymond Briggs,war and travel
+43306,Invisible Cities,Italo Calvino,war and travel
+43380,Auto-da-Fe,Elias Canetti,war and travel
+43474,One of Ours,Willa Cather,war and travel
+43517,Journey to the End of the Night,Louis-Ferdinand Celine,war and travel
+43554,Monkey,Wu Ch'eng-en,war and travel
+43634,Heart of Darkness,Joseph Conrad,war and travel
+43676,Lord Jim,Joseph Conrad,war and travel
+43731,Nostromo,Joseph Conrad,war and travel
+43776,Sharpe's Eagle,Bernard Cornwell,war and travel
+43868,The History of Pompey the Little,Francis Coventry,war and travel
+43905,The Red Badge of Courage,Stephen Crane,war and travel
+43966,Robinson Crusoe,Daniel Defoe,war and travel
+43994,Bomber,Len Deighton,war and travel
+44046,Deliverance,James Dickey,war and travel
+44051,Three Soldiers,John Dos Passos,war and travel
+44137,South Wind,Norman Douglas,war and travel
+44177,The Three Musketeers,Alexandre Dumas,war and travel
+44250,Justine,Lawrence Durrell,war and travel
+44287,The Bamboo Bed,William Eastlake,war and travel
+44343,The Siege of Krishnapur,JG Farrell,war and travel
+44389,Birdsong,Sebastian Faulks,war and travel
+44400,Parade's End,Ford Madox Ford,war and travel
+44471,The African Queen,CS Forester,war and travel
+44526,The Ship,CS Forester,war and travel
+44539,Flashman,George MacDonald Fraser,war and travel
+44623,Cold Mountain,Charles Frazier,war and travel
+44632,The Beach,Alex Garland,war and travel
+44637,To The Ends of the Earth trilogy,William Golding,war and travel
+44670,Asterix the Gaul,Rene Goscinny,war and travel
+44736,The Tin Drum,Gunter Grass,war and travel
+44788,Count Belisarius,Robert Graves,war and travel
+44848,Life and Fate,Vassily Grossman,war and travel
+44916,De Niro's Game,Rawi Hage,war and travel
+44995,King Solomon's Mines,H Rider Haggard,war and travel
+45051,She: A History of Adventure,H Rider Haggard,war and travel
+45081,The Slaves of Solitude,Patrick Hamilton,war and travel
+45100,Covenant with Death,John Harris,war and travel
+45181,Enigma,Robert Harris,war and travel
+45244,The Good Soldier Svejk,Jaroslav Hasek,war and travel
+45296,For Whom the Bell Tolls,Ernest Hemingway,war and travel
+45296,The Prisoner of Zenda,Anthony Hope,war and travel
+45382,The Kite Runner,Khaled Hosseini,war and travel
+45389,A High Wind in Jamaica,Richard Hughes,war and travel
+45450,Rasselas,Samuel Johnson,war and travel
+45542,From Here to Eternity,James Jones,war and travel
+45632,Andersonville,MacKinlay Kantor,war and travel
+45705,Confederates,Thomas Keneally,war and travel
+45733,Schindler's Ark,Thomas Keneally,war and travel
+45804,Day,AL Kennedy,war and travel
+45833,On the Road,Jack Kerouac,war and travel
+45904,Darkness at Noon,Arthur Koestler,war and travel
+45990,The Painted Bird,Jerzy Kosinski,war and travel
+46082,"If Not Now, When?",Primo Levi,war and travel
+46134,The Call of the Wild,Jack London,war and travel
+46167,The Guns of Navarone,Alistair MacLean,war and travel
+46195,All the Pretty Horses,Cormac McCarthy,war and travel
+46292,Blood Meridian,Cormac McCarthy,war and travel
+46356,The Mark of Zorro,Johnston McCulley,war and travel
+46448,Lonesome Dove,Larry McMurty,war and travel
+46494,The Naked and the Dead,Norman Mailer,war and travel
+46592,La Condition Humaine,Andre Malraux,war and travel
+46601,Fortunes of War,Olivia Manning,war and travel
+46673,One Hundred Years of Solitude,Gabriel Garcia Marquez,war and travel
+46758,The Children of the New Forest,Frederick Marryat,war and travel
+46787,"Moby-Dick or, The Whale",Herman Melville,war and travel
+46834,Tales of the South Pacific,James Michener,war and travel
+46901,The Cruel Sea,Nicholas Monsarrat,war and travel
+46921,History,Elsa Morante,war and travel
+46944,Suite Francaise,Irene Nemirovsky,war and travel
+46972,The Sorrow of War,Bao Ninh,war and travel
+46983,Master and Commander,Patrick O'Brian,war and travel
+47055,The Things They Carried,Tim O'Brien,war and travel
+47117,The Scarlet Pimpernel,Baroness Emmuska Orczy,war and travel
+47198,Burmese Days,George Orwell,war and travel
+47246,Zen and the Art of Motorcycle Maintenance,Robert Pirsig,war and travel
+47294,The Valley of Bones,Anthony Powell,war and travel
+47351,The Soldier's Art,Anthony Powell,war and travel
+47415,The Military Philosophers,Anthony Powell,war and travel
+47474,Gravity's Rainbow,Thomas Pynchon,war and travel
+47508,The Surprising Adventures of Baron Munchausen,Rudolp Erich Raspe,war and travel
+47545,All Quiet on the Western Front,Erich Maria Remarque,war and travel
+47603,The Crab with the Golden Claws,Georges Remi Herge,war and travel
+47650,Tintin in Tibet,Georges Remi Herge,war and travel
+47733,The Castafiore Emerald,Georges Remi Herge,war and travel
+47772,The Devil to Pay in the Backlands,Joao Guimaraes Rosa,war and travel
+47842,Sacaramouche,Rafael Sabatini,war and travel
+47925,Captain Blood,Rafael Sabatini,war and travel
+47957,Everything is Illuminated,Jonathon Safran Foer,war and travel
+47957,The Hunters,James Salter,war and travel
+47981,Ivanhoe,Sir Walter Scott,war and travel
+48008,The Rings of Saturn,WG Sebald,war and travel
+48033,Austerlitz,WG Sebald,war and travel
+48098,Black Beauty,Anna Sewell,war and travel
+48105,The Young Lions,Irwin Shaw,war and travel
+48127,A Town Like Alice,Nevil Shute,war and travel
+48225,Maus,Art Spiegelman,war and travel
+48282,The Charterhouse of Parma,Stendhal,war and travel
+48316,Cryptonomicon,Neil Stephenson,war and travel
+48347,A Sentimental Journey,Lawrence Sterne,war and travel
+48446,Kidnapped,Robert Louis Stevenson,war and travel
+48528,Treasure Island,Robert Louis Stevenson,war and travel
+48546,A Flag for Sunrise,Robert Stone,war and travel
+48563,Sophie's Choice,William Styron,war and travel
+48592,Gulliver's Travels,Jonathan Swift,war and travel
+48611,War and Peace,Leo Tolstoy,war and travel
+48668,The Adventures of Huckleberry Finn,Mark Twain,war and travel
+48738,Around the World in Eighty Days,Jules Verne,war and travel
+48759,A Journey to the Centre of the Earth,Jules Verne,war and travel
+48848,Williwaw,Gore Vidal,war and travel
+48939,Candide,Voltaire,war and travel
+48948,Slaughter-House Five,Kurt Vonnegut,war and travel
+48987,Put Out More Flags,Evelyn Waugh,war and travel
+49084,Men at Arms,Evelyn Waugh,war and travel
+49165,The Island of Dr Moreau,HG Wells,war and travel
+49260,The Machine-Gunners,Robert Westall,war and travel
+49308,Voss,Patrick White,war and travel
+49396,The Virginian,Owen Wister,war and travel
+49457,The Caine Mutiny,Herman Wouk,war and travel
+49511,The Debacle,Emile Zola,war and travel
